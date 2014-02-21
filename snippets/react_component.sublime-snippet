@@ -1,0 +1,27 @@
+<snippet>
+    <content><![CDATA[/**
+ * @jsx React.DOM
+ */
+
+var React = require('React');
+
+var PropTypes = React.PropTypes;
+
+var ${1} = React.createClass({
+
+  propTypes: {
+    ${2}
+  },
+
+  render: function() {
+    ${0}
+  }
+
+});
+
+module.exports = ${1};
+]]></content>
+    <tabTrigger>rcc</tabTrigger>
+    <scope>source.js</scope>
+    <description>React: component skeleton</description>
+</snippet>
