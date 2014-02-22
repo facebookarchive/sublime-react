@@ -1,6 +1,6 @@
 var fs = require('fs');
 
-fs.writeFile('README', '# sublime-react\n\nSnippets and syntax highlighting for React.js / JSX.\n\nJSX syntax highlighting provided by [yungsters/sublime](https://github.com/yungsters/sublime)\n\n## Installation\n\nVia Sublime\'s Package Manager \n\n## Usage\n\nActivate snippets by typing the mnemonic followed by TAB.\n\n### Available snippets:\n\n```javascript\n', function (err) {
+fs.writeFile('README.md', '# sublime-react\n\nSnippets and syntax highlighting for React.js / JSX.\n\nJSX syntax highlighting provided by [yungsters/sublime](https://github.com/yungsters/sublime)\n\n## Installation\n\nVia Sublime\'s Package Manager \n\n## Usage\n\nActivate snippets by typing the mnemonic followed by TAB.\n\n### Available snippets:\n\n```javascript\n', function (err) {
   if (err) {
     throw err;
   }
