@@ -5,16 +5,12 @@
 
 var React = require('React');
 
-var PropTypes = React.PropTypes;
-
 var ${1} = React.createClass({
 
-  propTypes: {
-    ${2}
-  },
-
   render: function() {
-    ${0}
+    return (
+      ${0:<div />}
+    );
   }
 
 });
