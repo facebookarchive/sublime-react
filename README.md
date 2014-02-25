@@ -4,9 +4,11 @@ Snippets and syntax highlighting for React.js / JSX.
 
 JSX syntax highlighting provided by [yungsters/sublime](https://github.com/yungsters/sublime)
 
+![alt tag](https://raw.github.com/jgebhardt/sublime-react/master/docs/sublime-react-jsx.gif)
+
 ## Installation
 
-Via Sublime's Package Manager 
+Via Sublime's Package Manager (tbd)
 
 ## Usage
 
@@ -15,11 +17,11 @@ Activate snippets by typing the mnemonic followed by TAB.
 ### Available snippets:
 
 ```javascript
-   cdm→  componentDidMount: fn() { ... }
+   cwm→  componentWillMount: fn() { ... }
 
   cdup→  componentDidUpdate: fn(pp, ps) { ... }
 
-   cwm→  componentWillMount: fn() { ... }
+   cdm→  componentDidMount: fn() { ... }
 
    cwr→  componentWillReceiveProps: fn(np) { ... }
 
@@ -31,19 +33,25 @@ Activate snippets by typing the mnemonic followed by TAB.
 
    gdp→  getDefaultProps: fn() { return {...} } 
 
+   gis→  getInitialState: fn() { return {...} } 
+
    ism→  isMounted()
 
    jsx→  /** @jsx */
 
     pt→  propTypes { ... }
 
-   rcc→  component skeleton
-
    ren→  render: fn() { return ... }
 
    sst→  setState({ ... })
 
+   rcc→  component skeleton
+
    scu→  shouldComponentUpdate: fn(np, ns) { ... }
+
+  props→  this.state.
+
+  state→  this.state.
 
    trp→  transferPropsTo( ... )
 
