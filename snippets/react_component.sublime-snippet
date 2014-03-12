@@ -7,11 +7,11 @@ var React = require('React');
 
 var ${1} = React.createClass({
 
-  render: function() {
-    return (
-      ${0:<div />}
-    );
-  }
+	render: function() {
+		return (
+			${0:<div />}
+		);
+	}
 
 });
 

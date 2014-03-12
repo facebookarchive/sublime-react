@@ -1,7 +1,7 @@
 <snippet>
     <content><![CDATA[
 propTypes: {
-  ${1}: React.PropTypes.${2:string}
+	${1}: React.PropTypes.${2:string}
 },
 ]]></content>
     <tabTrigger>pt</tabTrigger>
