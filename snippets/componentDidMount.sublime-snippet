@@ -1,7 +1,7 @@
 <snippet>
     <content><![CDATA[
 componentDidMount: function() {
-  ${1}
+	${1}
 },
 ]]></content>
     <tabTrigger>cdm</tabTrigger>

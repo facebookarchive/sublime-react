@@ -1,7 +1,7 @@
 <snippet>
     <content><![CDATA[
 componentDidUpdate: function(prevProps, prevState) {
-  ${1}
+	${1}
 },
 ]]></content>
     <tabTrigger>cdup</tabTrigger>

@@ -1,7 +1,7 @@
 <snippet>
     <content><![CDATA[
 componentWillUnmount: function() {
-  ${1}
+	${1}
 },
 ]]></content>
     <tabTrigger>cwun</tabTrigger>
