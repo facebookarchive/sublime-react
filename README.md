@@ -59,11 +59,11 @@ It's easy! Simply activate snippets by typing a mnemonic followed by TAB.
 
     ism→  isMounted()
 
-    rcc→  component skeleton
+    jsx→  /** @jsx */
 
      pt→  propTypes { ... }
 
-    jsx→  /** @jsx */
+    rcc→  component skeleton
 
     ren→  render: fn() { return ... }
 
@@ -71,9 +71,9 @@ It's easy! Simply activate snippets by typing a mnemonic followed by TAB.
 
     scu→  shouldComponentUpdate: fn(np, ns) { ... }
 
-  props→  this.state.
-
-  state→  this.state.
+  props→  this.props.
 
     trp→  transferPropsTo( ... )
+
+  state→  this.state.
 

@@ -4,5 +4,5 @@ this.props.${1}
 ]]></content>
     <tabTrigger>props</tabTrigger>
     <scope>source.js</scope>
-    <description>React: this.state.</description>
+    <description>React: this.props.</description>
 </snippet>
