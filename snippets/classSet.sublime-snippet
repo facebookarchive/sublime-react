@@ -2,7 +2,7 @@
     <content><![CDATA[
 var cx = React.addons.classSet;
 ]]></content>
-    <tabTrigger>cx</tabTrigger>
+    <tabTrigger>cs</tabTrigger>
     <scope>source.js</scope>
     <description>React: var cx = React.addons.classSet;</description>
 </snippet>
