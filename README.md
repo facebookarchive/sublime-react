@@ -39,11 +39,15 @@ It's easy! Simply activate snippets by typing a mnemonic followed by TAB.
 #### Available snippets:
 
 ```
+     cs→  var cx = React.addons.classSet;
+
     cdm→  componentDidMount: fn() { ... }
 
    cdup→  componentDidUpdate: fn(pp, ps) { ... }
 
     cwm→  componentWillMount: fn() { ... }
+
+     cx→  cx({ ... })
 
     cwr→  componentWillReceiveProps: fn(np) { ... }
 
@@ -59,21 +63,21 @@ It's easy! Simply activate snippets by typing a mnemonic followed by TAB.
 
     ism→  isMounted()
 
-    jsx→  /** @jsx */
-
      pt→  propTypes { ... }
+
+    jsx→  /** @jsx */
 
     rcc→  component skeleton
 
-    ren→  render: fn() { return ... }
-
     sst→  setState({ ... })
+
+    ren→  render: fn() { return ... }
 
     scu→  shouldComponentUpdate: fn(np, ns) { ... }
 
   props→  this.props.
 
-    trp→  transferPropsTo( ... )
-
   state→  this.state.
+
+    trp→  transferPropsTo( ... )
 
