@@ -39,21 +39,21 @@ It's easy! Simply activate snippets by typing a mnemonic followed by TAB.
 #### Available snippets:
 
 ```
-     cs→  var cx = React.addons.classSet;
-
     cdm→  componentDidMount: fn() { ... }
 
    cdup→  componentDidUpdate: fn(pp, ps) { ... }
 
-    cwm→  componentWillMount: fn() { ... }
+     cs→  var cx = React.addons.classSet;
 
-     cx→  cx({ ... })
+    cwm→  componentWillMount: fn() { ... }
 
     cwr→  componentWillReceiveProps: fn(np) { ... }
 
+    cwu→  componentWillUpdate: fn(np, ns) { ... }
+
    cwun→  componentWillUnmount: fn() { ... }
 
-    cwu→  componentWillUpdate: fn(np, ns) { ... }
+     cx→  cx({ ... })
 
     fup→  forceUpdate(...)
 
@@ -63,21 +63,29 @@ It's easy! Simply activate snippets by typing a mnemonic followed by TAB.
 
     ism→  isMounted()
 
-     pt→  propTypes { ... }
-
     jsx→  /** @jsx */
 
-    rcc→  component skeleton
+  props→  this.props.
 
-    sst→  setState({ ... })
+     pt→  propTypes { ... }
+
+    rcc→  component skeleton
 
     ren→  render: fn() { return ... }
 
     scu→  shouldComponentUpdate: fn(np, ns) { ... }
 
-  props→  this.props.
+    sst→  setState({ ... })
 
   state→  this.state.
 
     trp→  transferPropsTo( ... )
+
+```
+
+## Contributing
+
+### Rebuilding the docs
+
+After making changes to snippet files, run `npm install && npm run build-docs` to automatically generate this document from source.
 

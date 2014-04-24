@@ -1,7 +1,8 @@
 var fs = require('fs');
+var async = require('async');
 
-fs.writeFile(
-  'README.md', '# sublime-react\n\n' +
+var DOCUMENTATION_TOP =
+  '# sublime-react\n\n' +
   'Snippets and syntax highlighting for React.js / JSX.\n\n' +
   '![alt tag](https://raw.github.com/jgebhardt/sublime-react/master/docs/img/sr-rcc-out.gif)\n\n' +
   '## Installation\n\n' +
@@ -21,38 +22,70 @@ fs.writeFile(
   'It\'s easy! Simply activate snippets by typing a mnemonic followed by TAB.\n\n' +
   '![alt tag](https://raw.github.com/jgebhardt/sublime-react/master/docs/img/sr-snippets-out.gif)\n\n' +
   '#### Available snippets:\n\n' +
-  '```\n', function (err) {
-  if (err) {
-    throw err;
-  }
-});
+  '```\n';
+
+var DOCUMENTATION_BOTTOM =
+  '```\n\n' +
+  '## Contributing\n\n' +
+  '### Rebuilding the docs\n\n' +
+  'After making changes to snippet files, run `npm install && npm run build-docs` to automatically generate this document from source.\n\n';
 
 fs.readdir('./snippets', function(err, files) {
-  files
-    .filter(function(file) {
-      return file.substr(-16) === '.sublime-snippet';
-    })
-    .forEach(function(file) {
-      fs.readFile('./snippets/' + file, 'utf-8', function(err, contents) {
-        if (!err) {
-          inspectFile(contents);
-        }
-      });
+  var snippets = files.filter(function(file) {
+    return file.substr(-16) === '.sublime-snippet';
+  }).map(function(file) {
+    return './snippets/' + file;
+  });
+  async.map(snippets, readAndInspect, function(err, results) {
+    if (err) {
+      console.error('error mapping snippets', err);
+    }
+    var snippetDocs =
+      DOCUMENTATION_TOP +
+      results.map(function(snippet) {
+        return inspectFile(snippet);
+      }).sort(function(a, b) {
+        return a.abbreviation > b.abbreviation
+          ? 1
+          : a.abbreviation === b.abbreviation
+            ? 0
+            : -1;
+      }).map(function(snippet) {
+        return snippet.docBlock;
+      }).join('') +
+      DOCUMENTATION_BOTTOM;
+    fs.writeFile('README.md', snippetDocs, function (err) {
+      if (err) {
+        console.error('error appending README:', err);
+      }
     });
+  });
 });
+
+function readAndInspect(fileName, cb) {
+  fs.readFile(fileName, 'utf-8', function(err, contents) {
+    if (!err) {
+      cb(null, contents);
+    }
+  });
+}
 
 function inspectFile(contents) {
   var match = contents.match(
     /[\s\S]*<tabTrigger>(.*?)<\/tabTrigger>[\s\S]*?<description>(React: )?(.*?)<\/description>[\s\S]*/i
   );
   var docBlock = '';
+  var abbreviation = '';
+  var description = '';
   if (match !== null) {
-    var shortCut = '     '.substring(0, 5 - match[1].length) + match[1];
-    docBlock = '  ' + shortCut + '→  ' + match[3] + '\n\n';
+    abbreviation = match[1];
+    description = match[3];
+    var shortCut = '     '.substring(0, 5 - abbreviation.length) + abbreviation;
+    docBlock = '  ' + shortCut + '→  ' + description + '\n\n';
   }
-  fs.appendFile('README.md', docBlock, function (err) {
-    if (err) {
-      console.error('error appending README:', err);
-    }
-  });
+  return {
+    docBlock: docBlock,
+    abbreviation: abbreviation,
+    description: description
+  };
 }
