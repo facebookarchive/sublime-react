@@ -28,7 +28,10 @@ var DOCUMENTATION_BOTTOM =
   '```\n\n' +
   '## Contributing\n\n' +
   '### Rebuilding the docs\n\n' +
-  'After making changes to snippet files, run `npm install && npm run build-docs` to automatically generate this document from source.\n\n';
+  'After making changes to snippet files, run `npm install && npm run build-docs` to automatically generate this document from source.\n\n' +
+  '### Contributor License Agreement\n\n' +
+  'Contributions are very welcome, but we ask that you please fill out our ' +
+  '[CLA](https://code.facebook.com/cla) in order for us to accept your pull request.\n\n';
 
 fs.readdir('./snippets', function(err, files) {
   var snippets = files.filter(function(file) {
