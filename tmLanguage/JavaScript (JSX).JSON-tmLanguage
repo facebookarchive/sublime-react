@@ -435,6 +435,18 @@
 
 
 
+    "pcdata": {
+      "patterns": [
+        { "include": "#pcdata-quotes" }
+      ]
+    },
+    "pcdata-quotes": {
+      "name": "meta.other.pcdata.js",
+      "match": "\\b\\w+['\"]\\w+\\b"
+    },
+
+
+
     "jsx-tag-attributes": {
       "patterns": [
         { "include": "#jsx-tag-attribute-name" },
@@ -685,6 +697,7 @@
       "comment": "The main building block",
       "patterns": [
         { "include": "#comment" },
+        { "include": "#pcdata" },
         { "include": "#class-expression" },
         { "include": "#function" },
         { "include": "#block" },
