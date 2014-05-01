@@ -89,6 +89,12 @@ It's easy! Simply activate snippets by typing a mnemonic followed by TAB.
 
 After making changes to snippet files, run `npm install && npm run build-docs` to automatically generate this document from source.
 
+### Updating JSX syntax highlighting
+
+To pull in updates from yungsters/sublime, run:
+
+`git subtree pull --prefix syntax/jsx https://github.com/yungsters/sublime.git master --squash`
+
 ### Contributor License Agreement
 
 Contributions are very welcome, but we ask that you please fill out our [CLA](https://code.facebook.com/cla) in order for us to accept your pull request.
