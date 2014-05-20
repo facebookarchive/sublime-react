@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+getDefaultProps: ->
+	${1}
+
+]]></content>
+    <tabTrigger>gdp</tabTrigger>
+    <scope>source.coffee</scope>
+    <description>React: getDefaultProps: -></description>
+</snippet>

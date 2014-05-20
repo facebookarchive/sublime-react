@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+@props.${1}
+]]></content>
+    <tabTrigger>props</tabTrigger>
+    <scope>source.coffee</scope>
+    <description>React: @props.</description>
+</snippet>

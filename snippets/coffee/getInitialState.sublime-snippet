@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+getInitialState: ->
+	{${1}: ${2}}
+
+]]></content>
+    <tabTrigger>gis</tabTrigger>
+    <scope>source.coffee</scope>
+    <description>React: getInitialState: -> { return {...} } </description>
+</snippet>

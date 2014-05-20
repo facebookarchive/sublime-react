@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+render: ->
+	${1:<div />}
+
+]]></content>
+    <tabTrigger>ren</tabTrigger>
+    <scope>source.coffee</scope>
+    <description>React: render: -> { return ... }</description>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+componentDidUpdate: (prevProps, prevState) ->
+	${1}
+
+]]></content>
+    <tabTrigger>cdup</tabTrigger>
+    <scope>source.coffee</scope>
+    <description>React: componentDidUpdate: (pp, ps) -></description>
+</snippet>

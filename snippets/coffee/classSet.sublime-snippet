@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+cx = React.addons.classSet
+]]></content>
+    <tabTrigger>cs</tabTrigger>
+    <scope>source.coffee</scope>
+    <description>React: cx = React.addons.classSet</description>
+</snippet>

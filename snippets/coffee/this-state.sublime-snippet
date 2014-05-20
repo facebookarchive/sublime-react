@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+@state.${1}
+]]></content>
+    <tabTrigger>state</tabTrigger>
+    <scope>source.coffee</scope>
+    <description>React: @state.</description>
+</snippet>
