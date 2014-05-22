@@ -21,7 +21,8 @@ var DOCUMENTATION_TOP =
   '### Snippets\n\n' +
   'It\'s easy! Simply activate snippets by typing a mnemonic followed by TAB.\n\n' +
   '![alt tag](https://raw.github.com/jgebhardt/sublime-react/master/docs/img/sr-snippets-out.gif)\n\n' +
-  '#### Available snippets:\n\n' +
+  'Snippets are available for both JSX and CJSX ([React CoffeeScript](https://github.com/jsdf/coffee-react-transform)).\n\n' +
+  '#### Documentation of available snippets (JSX):\n\n' +
   '```\n';
 
 var DOCUMENTATION_BOTTOM =
@@ -36,11 +37,11 @@ var DOCUMENTATION_BOTTOM =
   'Contributions are very welcome, but we ask that you please fill out our ' +
   '[CLA](https://code.facebook.com/cla) in order for us to accept your pull request.\n\n';
 
-fs.readdir('./snippets', function(err, files) {
+fs.readdir('./snippets/js', function(err, files) {
   var snippets = files.filter(function(file) {
     return file.substr(-16) === '.sublime-snippet';
   }).map(function(file) {
-    return './snippets/' + file;
+    return './snippets/js/' + file;
   });
   async.map(snippets, readAndInspect, function(err, results) {
     if (err) {

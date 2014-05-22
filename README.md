@@ -36,7 +36,9 @@ It's easy! Simply activate snippets by typing a mnemonic followed by TAB.
 
 ![alt tag](https://raw.github.com/jgebhardt/sublime-react/master/docs/img/sr-snippets-out.gif)
 
-#### Available snippets:
+Snippets are available for both JSX and CJSX ([React CoffeeScript](https://github.com/jsdf/coffee-react-transform)).
+
+#### Documentation of available snippets (JSX):
 
 ```
     cdm→  componentDidMount: fn() { ... }
