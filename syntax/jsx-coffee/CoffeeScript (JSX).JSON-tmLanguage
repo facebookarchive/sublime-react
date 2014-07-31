@@ -298,7 +298,7 @@
       }
     },
     "begin": "(?<!#)###(?!#)",
-    "end": "###(?:[ \\t]*\\n)",
+    "end": "###",
     "name": "comment.block.coffee",
     "patterns": [{
       "name": "storage.type.annotation.coffeescript",
