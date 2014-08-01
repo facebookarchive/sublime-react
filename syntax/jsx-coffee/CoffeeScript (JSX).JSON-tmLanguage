@@ -208,6 +208,40 @@
       }, {
         "include": "#jsx-tag-invalid"
       }]
+    },
+    "jsx-tag-area": {
+      "captures": {
+        "0": {
+          "name": "captured.jsx.cjsx"
+        }
+      },
+      "name": "jsx.tag-area.cjsx",
+      "begin": "(<)([a-zA-Z0-9:.]+)([^>]?)(>)",
+      "end": "(</)(\\2)([^>]?>)",
+      "beginCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.cjsx"
+        },
+        "2": {
+          "name": "entity.name.tag.cjsx"
+        }
+      },
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.cjsx"
+        },
+        "2": {
+          "name": "entity.name.tag.cjsx"
+        },
+        "4": {
+          "name": "punctuation.definition.tag.end.cjsx"
+        }
+      },
+      "patterns": [{
+        "include": "#jsx-tag-open"
+      }, { 
+        "include": "#jsx-evaluated-code" 
+      }]
     }
 
   },
@@ -215,6 +249,8 @@
   "scopeName": "source.coffee",
   "keyEquivalent": "^~C",
   "patterns": [{
+    "include": "#jsx-tag-area"
+  }, {
     "include": "#jsx"
   }, {
     "comment": "match stuff like: a -> \u2026 ",
