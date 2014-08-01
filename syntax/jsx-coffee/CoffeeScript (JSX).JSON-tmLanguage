@@ -1,5 +1,5 @@
 {
-  "comment": "CoffeeScript Syntax: version 1",
+  "comment": "CJSX Syntax",
   "firstLineMatch": "^#!.*\\bcoffee",
   "name": "CoffeeScript (JSX)",
   "repository": {
@@ -160,7 +160,7 @@
       }]
     },
     "jsx-tag-open": {
-      "begin": "(<)([a-zA-Z0-9:]+)",
+      "begin": "(<)([a-zA-Z0-9:.]+)",
       "end": "(/?>)",
       "name": "tag.open.coffee",
       "endCaptures": {
