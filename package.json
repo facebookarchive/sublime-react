@@ -2,7 +2,7 @@
   "name": "sublime-react",
   "version": "0.1.0",
   "author": "Jonas Gebhardt <jonas.gebhardt@gmail.com>",
-  "description": "a simple zero-configuration command-line http server",
+  "description": "Sublime Text helpers for React/JSX",
   "scripts": {
     "build-docs": "node ./generateReadme.js"
   },
