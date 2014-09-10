@@ -2,7 +2,36 @@
   "comment": "CJSX Syntax",
   "firstLineMatch": "^#!.*\\bcoffee",
   "name": "CoffeeScript (JSX)",
+  "foldingStopMarker": "^\\s*$|^\\s*[}\\]]\\s*$",
+  "fileTypes": [
+    "cjsx",
+    "coffee",
+    "Cakefile",
+    "coffee.erb",
+    "cson"
+  ],
   "repository": {
+
+    "single_quote": {
+      "patterns": [{
+        "name": "constant.character.escape.coffee",
+        "match": "\\\\(x\\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)"
+      }, {
+        "include": "#jsx-entities"
+      }]
+    },
+
+    "double_quote": {
+      "patterns": [{
+        "name": "constant.character.escape.coffee",
+        "match": "\\\\(x\\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]|37[0-7]?|[4-7][0-7]?|.)"
+      }, {
+        "include": "#interpolated_coffee"
+      }, {
+        "include": "#jsx-entities"
+      }]
+    },
+
     "single_quoted_string": {
       "patterns": [{
         "begin": "'",
@@ -19,10 +48,7 @@
           }
         },
         "patterns": [{
-          "name": "constant.character.escape.coffee",
-          "match": "\\\\(x\\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)"
-        }, {
-          "include": "#jsx-entities"
+          "include": "#single_quote"
         }]
       }]
     },
@@ -85,12 +111,7 @@
           }
         },
         "patterns": [{
-          "name": "constant.character.escape.coffee",
-          "match": "\\\\(x\\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]|37[0-7]?|[4-7][0-7]?|.)"
-        }, {
-          "include": "#interpolated_coffee"
-        }, {
-          "include": "#jsx-entities"
+          "include": "#double_quote"
         }]
       }]
     },
@@ -101,27 +122,62 @@
       }]
     },
 
-
     "jsx-tag-attributes": {
       "patterns": [{
-        "include": "#jsx-tag-attribute-name"
+        "include": "#jsx-double-quoted-prop"
       }, {
-        "include": "#double_quoted_string"
-      }, {
-        "include": "#single_quoted_string"
+        "include": "#jsx-single-quoted-prop"
       }, {
         "include": "#jsx-evaluated-code"
       }]
     },
-    "jsx-tag-attribute-name": {
-      "name": "meta.tag.attribute-name.coffee",
-      "match": "\\b([a-zA-Z\\-:]+)",
-      "captures": {
-        "1": {
-          "name": "entity.other.attribute-name.coffee"
-        }
-      }
+
+    "jsx-single-quoted-prop": {
+      "patterns": [{
+        "begin": "(?:=)\\s?*(')",
+        "end": "'",
+        "beginCaptures": {
+          "1": {
+            "name": "string.quoted.single.punctuation.definition.string.begin.coffee"
+          }
+        },
+        "endCaptures": {
+          "0": {
+            "name": "string.quoted.single.punctuation.definition.string.end.coffee"
+          }
+        },
+        "patterns": [{ 
+          "include": "#single_quote" 
+        }, {
+          "name": "string.quoted.single.coffee",
+          "match": ".*?"
+        }]
+      }]
     },
+
+    "jsx-double-quoted-prop": {
+      "patterns": [{
+        "begin": "(?:\\s*=\\s*)(\")",
+        "end": "\"",
+        "beginCaptures": {
+          "1": {
+            "name": "string.quoted.double.punctuation.definition.begin.coffee"
+          }
+        },
+        "endCaptures": {
+          "0": {
+            "name": "string.quoted.double.punctuation.definition.end.coffee"
+          }
+        },
+        "patterns": [{
+          "include": "#double_quote"
+        }, {
+          "name": "string.quoted.double.coffee",
+          "match": ".*?"
+        }]
+      }]
+    },    
+
     "jsx-entities": {
       "patterns": [{
         "name": "constant.character.entity.coffee",
@@ -139,6 +195,7 @@
         "match": "&"
       }]
     },
+    
     "jsx-evaluated-code": {
       "begin": "{",
       "end": "}",
@@ -154,11 +211,10 @@
         }
       },
       "patterns": [{
-        "include": "#expression"
-      }, {
         "include": "$self"
       }]
     },
+    
     "jsx-tag-open": {
       "begin": "(<)([a-zA-Z0-9:.]+)",
       "end": "(/?>)",
@@ -180,6 +236,7 @@
         "include": "#jsx-tag-attributes"
       }]
     },
+    
     "jsx-tag-close": {
       "match": "(</)([^>]+)(>)",
       "name": "tag.close.coffee",
@@ -195,10 +252,12 @@
         }
       }
     },
+    
     "jsx-tag-invalid": {
       "name": "invalid.illegal.tag.incomplete.coffee",
       "match": "<\\s*>"
     },
+    
     "jsx": {
       "name": "meta.jsx.coffee",
       "patterns": [{
@@ -209,36 +268,34 @@
         "include": "#jsx-tag-invalid"
       }]
     },
+
     "jsx-tag-area": {
-      "captures": {
-        "0": {
-          "name": "captured.jsx.cjsx"
-        }
-      },
-      "name": "jsx.tag-area.cjsx",
-      "begin": "(<)([a-zA-Z0-9:.]+)([^>]?)(>)",
-      "end": "(</)(\\2)([^>]?>)",
+      "name": "jsx.tag-area.coffee",
+      "begin": "(<)([a-zA-Z0-9:.]+)",
+      "end":   "(</)(\\2)([^>]*>)",
       "beginCaptures": {
         "1": {
-          "name": "punctuation.definition.tag.begin.cjsx"
+          "name": "punctuation.definition.tag.begin.coffee"
         },
         "2": {
-          "name": "entity.name.tag.cjsx"
+          "name": "entity.name.tag.coffee"
         }
       },
       "endCaptures": {
         "1": {
-          "name": "punctuation.definition.tag.begin.cjsx"
+          "name": "punctuation.definition.tag.begin.coffee"
         },
         "2": {
-          "name": "entity.name.tag.cjsx"
+          "name": "entity.name.tag.coffee"
         },
         "4": {
-          "name": "punctuation.definition.tag.end.cjsx"
+          "name": "punctuation.definition.tag.end.coffee"
         }
       },
       "patterns": [{
-        "include": "#jsx-tag-open"
+        "include": "#jsx-tag-attributes"
+      }, {
+        "include": "#jsx"
       }, { 
         "include": "#jsx-evaluated-code" 
       }]
@@ -399,9 +456,9 @@
     }, {
       "include": "#instance_variable"
     }, {
-      "include": "#single_quoted_string"
+      "include": "#jsx-single-quoted-prop"
     }, {
-      "include": "#double_quoted_string"
+      "include": "#jsx-double-quoted-prop"
     }, {
       "include": "#numeric"
     }]
@@ -518,13 +575,5 @@
     "include": "#double_quoted_string"
   }, {
     "include": "#numeric"
-  }],
-  "foldingStopMarker": "^\\s*$|^\\s*[}\\]]\\s*$",
-  "fileTypes": [
-    "cjsx",
-    "coffee",
-    "Cakefile",
-    "coffee.erb",
-    "cson"
-  ]
+  }]
 }
