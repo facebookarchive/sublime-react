@@ -261,6 +261,10 @@
     "jsx": {
       "name": "meta.jsx.coffee",
       "patterns": [{
+        "include": "#jsx-evaluated-code"
+      }, {
+        "include": "#jsx-tag-area"
+      }, {
         "include": "#jsx-tag-open"
       }, {
         "include": "#jsx-tag-close"
@@ -271,7 +275,7 @@
 
     "jsx-tag-area": {
       "name": "jsx.tag-area.coffee",
-      "begin": "(<)([a-zA-Z0-9:.]+)",
+      "begin": "(<)([a-zA-Z0-9:.]+)(?![^\n]*/>)",
       "end":   "(</)(\\2)([^>]*>)",
       "beginCaptures": {
         "1": {
@@ -296,8 +300,6 @@
         "include": "#jsx-tag-attributes"
       }, {
         "include": "#jsx"
-      }, { 
-        "include": "#jsx-evaluated-code" 
       }]
     }
 
@@ -306,8 +308,6 @@
   "scopeName": "source.coffee",
   "keyEquivalent": "^~C",
   "patterns": [{
-    "include": "#jsx-tag-area"
-  }, {
     "include": "#jsx"
   }, {
     "comment": "match stuff like: a -> \u2026 ",

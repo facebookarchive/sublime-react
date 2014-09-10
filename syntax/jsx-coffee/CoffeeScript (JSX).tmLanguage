@@ -26,10 +26,6 @@
 	<array>
 		<dict>
 			<key>include</key>
-			<string>#jsx-tag-area</string>
-		</dict>
-		<dict>
-			<key>include</key>
 			<string>#jsx</string>
 		</dict>
 		<dict>
@@ -699,6 +695,14 @@
 			<array>
 				<dict>
 					<key>include</key>
+					<string>#jsx-evaluated-code</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#jsx-tag-area</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#jsx-tag-open</string>
 				</dict>
 				<dict>
@@ -859,7 +863,8 @@
 		<key>jsx-tag-area</key>
 		<dict>
 			<key>begin</key>
-			<string>(&lt;)([a-zA-Z0-9:.]+)</string>
+			<string>(&lt;)([a-zA-Z0-9:.]+)(?![^
+]*/&gt;)</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -904,10 +909,6 @@
 				<dict>
 					<key>include</key>
 					<string>#jsx</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#jsx-evaluated-code</string>
 				</dict>
 			</array>
 		</dict>
