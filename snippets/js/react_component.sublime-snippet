@@ -7,6 +7,8 @@ var React = require('react');
 
 var ${1} = React.createClass({
 
+	displayName: '${1}',
+
 	render: function() {
 		return (
 			${0:<div />}
