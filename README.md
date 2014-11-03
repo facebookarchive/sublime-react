@@ -26,7 +26,7 @@ JSX syntax highlighting provided by [yungsters/sublime](https://github.com/yungs
 
 To default to JSX highlighting, open a `.js` or `.jsx` file, then select from the main menu:
 
-`View` > `Syntax` > `Open all with current extension as...` > `JavaScript (JSX)`
+`View` > `Syntax` > `Open all with current extension as...` > `ReactJS` > `JavaScript (JSX)`
 
 JSX is fully compatible with plain JavaScript.
 
