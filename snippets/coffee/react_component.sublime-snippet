@@ -1,6 +1,5 @@
 <snippet>
-    <content><![CDATA[# @cjsx React.DOM
-
+    <content><![CDATA[
 React = require('react')
 
 ${1} = React.createClass

@@ -1,9 +1,0 @@
-<snippet>
-    <content><![CDATA[
-# @cjsx React.DOM
-
-]]></content>
-    <tabTrigger>jsx</tabTrigger>
-    <scope>source.coffee</scope>
-    <description>React: /** @cjsx */</description>
-</snippet>
