@@ -599,6 +599,10 @@
 					<key>include</key>
 					<string>#jsx-tag-attributes</string>
 				</dict>
+				<dict>
+					<key>include</key>
+					<string>#comments</string>
+				</dict>
 			</array>
 		</dict>
 		<key>leading-space</key>

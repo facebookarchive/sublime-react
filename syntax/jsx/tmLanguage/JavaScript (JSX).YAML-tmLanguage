@@ -118,6 +118,7 @@ repository:
       '1': {name: punctuation.definition.tag.end.js}
     patterns:
     - include: '#jsx-tag-attributes'
+    - include: '#comments'
 
   jsx-tag-close:
     match: (</)([^>]+)(>)
