@@ -1960,7 +1960,8 @@
 					<string>(?x)
   (?:(?&lt;=
     \.|\(|,|{|}|\[|;|,|&lt;|&gt;|&lt;=|&gt;=|==|!=|===|!==|\+|-|\*|%|\+\+|--|&lt;&lt;|&gt;&gt;|&gt;&gt;&gt;|&amp;|\||\^|!|~|&amp;&amp;|\|\||\?|:|=|\+=|-=|\*=|%=|&lt;&lt;=|&gt;&gt;=|&gt;&gt;&gt;=|&amp;=|\|=|\^=|/|/=|
-    new|delete|void|typeof|instanceof|in|do|return|case|throw
+    \Wnew|\Wdelete|\Wvoid|\Wtypeof|\Winstanceof|\Win|\Wdo|\Wreturn|\Wcase|\Wthrow|
+    ^new|^delete|^void|^typeof|^instanceof|^in|^do|^return|^case|^throw
   )|^)\s*
   (/)
   (?!/|\*|$)</string>

@@ -783,7 +783,8 @@ repository:
         (?x)
           (?:(?<=
             \.|\(|,|{|}|\[|;|,|<|>|<=|>=|==|!=|===|!==|\+|-|\*|%|\+\+|--|<<|>>|>>>|&|\||\^|!|~|&&|\|\||\?|:|=|\+=|-=|\*=|%=|<<=|>>=|>>>=|&=|\|=|\^=|/|/=|
-            new|delete|void|typeof|instanceof|in|do|return|case|throw
+            \Wnew|\Wdelete|\Wvoid|\Wtypeof|\Winstanceof|\Win|\Wdo|\Wreturn|\Wcase|\Wthrow|
+            ^new|^delete|^void|^typeof|^instanceof|^in|^do|^return|^case|^throw
           )|^)\s*
           (/)
           (?!/|\*|$)
