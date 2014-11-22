@@ -567,7 +567,7 @@
 		<key>jsx-tag-open</key>
 		<dict>
 			<key>begin</key>
-			<string>(&lt;)([a-zA-Z0-9:]+)</string>
+			<string>(&lt;)([a-zA-Z0-9\_\.:]+)</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>

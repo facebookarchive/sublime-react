@@ -108,7 +108,7 @@ repository:
     - include: '#core'
 
   jsx-tag-open:
-    begin: (<)([a-zA-Z0-9:]+)
+    begin: (<)([a-zA-Z0-9\_\.:]+)
     end: (/?>)
     name: tag.open.js
     beginCaptures:
