@@ -251,10 +251,10 @@ repository:
     patterns:
     # module names are defined using strings
     - name: storage.type.module.js
-      match: \b(module)\b
+      match: (?<!\.)\b(module)\b
 
     - name: keyword.operator.module.js
-      match: \b(import|export|from|as)\b
+      match: (?<!\.)\b(import|export|from|as)\b
 
   literal-class:
     patterns:
@@ -262,7 +262,7 @@ repository:
     - name: meta.class.js
       begin: >-
         (?x)
-          \b(class)
+          (?<!\.)\b(class)
           \s+([_$a-zA-Z][_$\w]*)
           (?:
             \s+(extends)
@@ -283,20 +283,28 @@ repository:
       - name: meta.method.js
         begin: >-
           (?x)
-            \b([_$a-zA-Z][_$\w]*)
+            \b(static\s)?
+            \s*([_$a-zA-Z][_$\w]*)
             \s*(?=\([^())]*\)\s*\{)
         beginCaptures:
-          '1': {name: entity.name.method.js}
+          '1': {name: storage.type.js}
+          '2': {name: entity.name.method.js}
         end: (?<=\))
         patterns:
         - include: '#function-declaration-parameters'
 
       # getter/setter
       - name: meta.accessor.js
-        begin: \b(get|set)\s*\b([_$a-zA-Z][_$\w]*)\s*
+        begin: >-
+          (?x)
+            \b(static\s)?
+            \s*(get|set)\s
+            \s*([_$a-zA-Z][_$\w]*)
+            \s*(?=\([^())]*\)\s*\{)
         beginCaptures:
-          '1': {name: storage.type.accessor.js}
-          '2': {name: entity.name.accessor.js}
+          '1': {name: storage.type.js}
+          '2': {name: storage.type.accessor.js}
+          '3': {name: entity.name.accessor.js}
         end: (?<=\))
         patterns:
         - include: '#function-declaration-parameters'
@@ -589,19 +597,19 @@ repository:
   literal-language-constant:
     patterns:
     - name: constant.language.boolean.true.js
-      match: \btrue\b
+      match: (?<!\.)\btrue\b
 
     - name: constant.language.boolean.false.js
-      match: \bfalse\b
+      match: (?<!\.)\bfalse\b
 
     - name: constant.language.null.js
-      match: \bnull\b
+      match: (?<!\.)\bnull\b
 
     - name: constant.language.undefined.js
-      match: \bundefined\b
+      match: (?<!\.)\bundefined\b
 
     - name: constant.language.nan.js
-      match: \bNaN\b
+      match: (?<!\.)\bNaN\b
 
   literal-keywords:
     patterns:
@@ -618,28 +626,25 @@ repository:
           '2': {name: entity.name.type.new.js}
 
     - name: storage.type.js
-      match: \b(var|let|const)\b
+      match: (?<!\.)\b(async|const|let|var)\b
 
     - name: keyword.control.flow.js
-      match: \b(return|yield)\b
+      match: (?<!\.)\b(return|yield)\b
 
     - name: keyword.control.conditional.js
-      match: \b(else|if)\b
+      match: (?<!\.)\b(else|if)\b
 
     - name: keyword.control.trycatch.js
       match: \b(catch|finally|throw|try)\b
 
     - name: keyword.control.loop.js
-      match: \b(break|continue|do|for|goto|while)\b
+      match: (?<!\.)\b(break|continue|do|for|goto|while)\b
 
     - name: keyword.control.switch.js
-      match: \b(case|default|switch)\b
+      match: (?<!\.)\b(case|default|switch)\b
 
     - name: keyword.operator.js
-      match: \b(delete|in(stanceof)?|of|new|typeof|void|with)\b
-
-    - name: keyword.operator.js
-      match: '!|%|&|\*|--|-|\+\+|\+|~|===|==|=|!=|!==|<=|>=|<<=|>>=|>>>=|<>|<|>|!|&&|\|\||\?\:|\*=|/=|%=|\+=|-=|&=|\^='
+      match: (?<!\.)\b(await|delete|in|instanceof|new|of|typeof|void|with)\b
 
     - name: punctuation.separator.key-value
       match: ':'
@@ -649,22 +654,27 @@ repository:
         (?x)
           !(?!=)| # logical-not     right-to-left   right
           &&    | # logical-and     left-to-right   both
-          \|\|   # logical-or      left-to-right   both
+          \|\|  | # logical-or      left-to-right   both
+
+    - name: keyword.operator.assignment.js
+      match: >-
+        (?x)
+          =      # assignment      right-to-left   both
 
     - name: keyword.operator.assignment.augmented.js
       match: >-
         (?x)
-            %= | # assignment      right-to-left   both
-            &= | # assignment      right-to-left   both
-           \*= | # assignment      right-to-left   both
-           \+= | # assignment      right-to-left   both
-            -= | # assignment      right-to-left   both
-            /= | # assignment      right-to-left   both
-           \^= | # assignment      right-to-left   both
-           \|= | # assignment      right-to-left   both
-           <<= | # assignment      right-to-left   both
-           >>= | # assignment      right-to-left   both
-          >>>=   # assignment      right-to-left   both
+          %=   | # assignment      right-to-left   both
+          &=   | # assignment      right-to-left   both
+          \*=  | # assignment      right-to-left   both
+          \+=  | # assignment      right-to-left   both
+          -=   | # assignment      right-to-left   both
+          /=   | # assignment      right-to-left   both
+          \^=  | # assignment      right-to-left   both
+          \|=  | # assignment      right-to-left   both
+          <<=  | # assignment      right-to-left   both
+          >>=  | # assignment      right-to-left   both
+          >>>= | # assignment      right-to-left   both
 
     - name: keyword.operator.bitwise.js
       match: >-
@@ -690,7 +700,7 @@ repository:
         (?x)
           ===  | # equality        left-to-right   both
           !==  | # equality        left-to-right   both
-           ==  | # equality        left-to-right   both
+          ==   | # equality        left-to-right   both
           !=     # equality        left-to-right   both
 
     - name: keyword.operator.assignment.js
@@ -855,7 +865,7 @@ repository:
 
     # e.g. obj.property
     - name: meta.property.object.js
-      match: (?<=[\.])\s*[_$a-zA-Z][_$\w]*
+      match: (?<=\.)\s*[_$a-zA-Z][_$\w]*
       captures:
         '2': {name: variable.other.property.js}
 
@@ -903,21 +913,21 @@ repository:
       match: \b(Array|Boolean|Date|Function|Map|Math|Number|Object|Proxy|RegExp|Set|String|WeakMap)\b
 
     - name: support.function.js
-      match: \b(decodeURI|decodeURIComponent|encodeURI|encodeURIComponent|escape|eval|isFinite|isNaN|parseFloat|parseInt|unescape)\b(?=\()
+      match: (?<!\.)\b(decodeURI|decodeURIComponent|encodeURI|encodeURIComponent|escape|eval|isFinite|isNaN|parseFloat|parseInt|unescape)\b
 
     - name: support.function.mutator.js
-      match: \b(shift|sort|splice|unshift|pop|push|reverse)\b(?=\()
+      match: \.(shift|sort|splice|unshift|pop|push|reverse)\b
 
     - name: support.class.error.js
-      match: \b((Eval|Range|Reference|Syntax|Type|URI)?Error)\b
+      match: (?<!\.)\b((Eval|Range|Reference|Syntax|Type|URI)?Error)\b
 
     # debugger
     - name: keyword.other.js
-      match: \b(debugger)\b
+      match: (?<!\.)\b(debugger)\b
 
     # dom
     - name: support.type.object.dom.js
-      match: \b(document|window)\b
+      match: (?<!\.)\b(document|window)\b
 
     - name: support.constant.dom.js
       match: >-
@@ -930,17 +940,17 @@ repository:
 
     # firebug
     - name: support.type.object.firebug.js
-      match: \b(console)\b
+      match: (?<!\.)\b(console)\b
 
     - name: support.function.firebug.js
       match: \.(warn|info|log|error|time|timeEnd|assert)\b
 
     # node
     - name: support.module.node.js
-      match: \b(natives|buffer|child_process|cluster|crypto|dgram|dns|fs|http|https|net|os|path|punycode|string|string_decoder|readline|repl|tls|tty|util|vm|zlib)\b
+      match: (?<!\.)\b(natives|buffer|child_process|cluster|crypto|dgram|dns|fs|http|https|net|os|path|punycode|string|string_decoder|readline|repl|tls|tty|util|vm|zlib)\b
 
     - name: support.type.object.node.js
-      match: \b(process|process\.env|global|GLOBAL|root|stdout|stdin|stderr|exports|__dirname|__filename|console)\b
+      match: (?<!\.)\b(process|process\.(env|stdout|stdin|stderr)|global|GLOBAL|root|exports|__dirname|__filename|console)\b
 
     - name: support.class.node.js
       match: \b(Buffer|EventEmitter|Server|Pipe|Socket|REPLServer|ReadStream|WriteStream|Stream|Inflate|Deflate|InflateRaw|DeflateRaw|GZip|GUnzip|Unzip|Zip)\b

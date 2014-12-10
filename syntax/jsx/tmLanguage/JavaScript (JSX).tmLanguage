@@ -985,7 +985,7 @@
 				<dict>
 					<key>begin</key>
 					<string>(?x)
-  \b(class)
+  (?&lt;!\.)\b(class)
   \s+([_$a-zA-Z][_$\w]*)
   (?:
     \s+(extends)
@@ -1037,11 +1037,17 @@
 						<dict>
 							<key>begin</key>
 							<string>(?x)
-  \b([_$a-zA-Z][_$\w]*)
+  \b(static\s)?
+  \s*([_$a-zA-Z][_$\w]*)
   \s*(?=\([^())]*\)\s*\{)</string>
 							<key>beginCaptures</key>
 							<dict>
 								<key>1</key>
+								<dict>
+									<key>name</key>
+									<string>storage.type.js</string>
+								</dict>
+								<key>2</key>
 								<dict>
 									<key>name</key>
 									<string>entity.name.method.js</string>
@@ -1061,15 +1067,24 @@
 						</dict>
 						<dict>
 							<key>begin</key>
-							<string>\b(get|set)\s*\b([_$a-zA-Z][_$\w]*)\s*</string>
+							<string>(?x)
+  \b(static\s)?
+  \s*(get|set)\s
+  \s*([_$a-zA-Z][_$\w]*)
+  \s*(?=\([^())]*\)\s*\{)</string>
 							<key>beginCaptures</key>
 							<dict>
 								<key>1</key>
 								<dict>
 									<key>name</key>
-									<string>storage.type.accessor.js</string>
+									<string>storage.type.js</string>
 								</dict>
 								<key>2</key>
+								<dict>
+									<key>name</key>
+									<string>storage.type.accessor.js</string>
+								</dict>
+								<key>3</key>
 								<dict>
 									<key>name</key>
 									<string>entity.name.accessor.js</string>
@@ -1409,19 +1424,19 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(var|let|const)\b</string>
+					<string>(?&lt;!\.)\b(async|const|let|var)\b</string>
 					<key>name</key>
 					<string>storage.type.js</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(return|yield)\b</string>
+					<string>(?&lt;!\.)\b(return|yield)\b</string>
 					<key>name</key>
 					<string>keyword.control.flow.js</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(else|if)\b</string>
+					<string>(?&lt;!\.)\b(else|if)\b</string>
 					<key>name</key>
 					<string>keyword.control.conditional.js</string>
 				</dict>
@@ -1433,25 +1448,19 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(break|continue|do|for|goto|while)\b</string>
+					<string>(?&lt;!\.)\b(break|continue|do|for|goto|while)\b</string>
 					<key>name</key>
 					<string>keyword.control.loop.js</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(case|default|switch)\b</string>
+					<string>(?&lt;!\.)\b(case|default|switch)\b</string>
 					<key>name</key>
 					<string>keyword.control.switch.js</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(delete|in(stanceof)?|of|new|typeof|void|with)\b</string>
-					<key>name</key>
-					<string>keyword.operator.js</string>
-				</dict>
-				<dict>
-					<key>match</key>
-					<string>!|%|&amp;|\*|--|-|\+\+|\+|~|===|==|=|!=|!==|&lt;=|&gt;=|&lt;&lt;=|&gt;&gt;=|&gt;&gt;&gt;=|&lt;&gt;|&lt;|&gt;|!|&amp;&amp;|\|\||\?\:|\*=|/=|%=|\+=|-=|&amp;=|\^=</string>
+					<string>(?&lt;!\.)\b(await|delete|in|instanceof|new|of|typeof|void|with)\b</string>
 					<key>name</key>
 					<string>keyword.operator.js</string>
 				</dict>
@@ -1466,24 +1475,31 @@
 					<string>(?x)
   !(?!=)| # logical-not     right-to-left   right
   &amp;&amp;    | # logical-and     left-to-right   both
-  \|\|   # logical-or      left-to-right   both</string>
+  \|\|  | # logical-or      left-to-right   both</string>
 					<key>name</key>
 					<string>keyword.operator.logical.js</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?x)
-    %= | # assignment      right-to-left   both
-    &amp;= | # assignment      right-to-left   both
-   \*= | # assignment      right-to-left   both
-   \+= | # assignment      right-to-left   both
-    -= | # assignment      right-to-left   both
-    /= | # assignment      right-to-left   both
-   \^= | # assignment      right-to-left   both
-   \|= | # assignment      right-to-left   both
-   &lt;&lt;= | # assignment      right-to-left   both
-   &gt;&gt;= | # assignment      right-to-left   both
-  &gt;&gt;&gt;=   # assignment      right-to-left   both</string>
+  =      # assignment      right-to-left   both</string>
+					<key>name</key>
+					<string>keyword.operator.assignment.js</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?x)
+  %=   | # assignment      right-to-left   both
+  &amp;=   | # assignment      right-to-left   both
+  \*=  | # assignment      right-to-left   both
+  \+=  | # assignment      right-to-left   both
+  -=   | # assignment      right-to-left   both
+  /=   | # assignment      right-to-left   both
+  \^=  | # assignment      right-to-left   both
+  \|=  | # assignment      right-to-left   both
+  &lt;&lt;=  | # assignment      right-to-left   both
+  &gt;&gt;=  | # assignment      right-to-left   both
+  &gt;&gt;&gt;= | # assignment      right-to-left   both</string>
 					<key>name</key>
 					<string>keyword.operator.assignment.augmented.js</string>
 				</dict>
@@ -1515,7 +1531,7 @@
 					<string>(?x)
   ===  | # equality        left-to-right   both
   !==  | # equality        left-to-right   both
-   ==  | # equality        left-to-right   both
+  ==   | # equality        left-to-right   both
   !=     # equality        left-to-right   both</string>
 					<key>name</key>
 					<string>keyword.operator.comparison.js</string>
@@ -1584,31 +1600,31 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>\btrue\b</string>
+					<string>(?&lt;!\.)\btrue\b</string>
 					<key>name</key>
 					<string>constant.language.boolean.true.js</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\bfalse\b</string>
+					<string>(?&lt;!\.)\bfalse\b</string>
 					<key>name</key>
 					<string>constant.language.boolean.false.js</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\bnull\b</string>
+					<string>(?&lt;!\.)\bnull\b</string>
 					<key>name</key>
 					<string>constant.language.null.js</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\bundefined\b</string>
+					<string>(?&lt;!\.)\bundefined\b</string>
 					<key>name</key>
 					<string>constant.language.undefined.js</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\bNaN\b</string>
+					<string>(?&lt;!\.)\bNaN\b</string>
 					<key>name</key>
 					<string>constant.language.nan.js</string>
 				</dict>
@@ -1764,13 +1780,13 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>\b(module)\b</string>
+					<string>(?&lt;!\.)\b(module)\b</string>
 					<key>name</key>
 					<string>storage.type.module.js</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(import|export|from|as)\b</string>
+					<string>(?&lt;!\.)\b(import|export|from|as)\b</string>
 					<key>name</key>
 					<string>keyword.operator.module.js</string>
 				</dict>
@@ -2143,7 +2159,7 @@
 						</dict>
 					</dict>
 					<key>match</key>
-					<string>(?&lt;=[\.])\s*[_$a-zA-Z][_$\w]*</string>
+					<string>(?&lt;=\.)\s*[_$a-zA-Z][_$\w]*</string>
 					<key>name</key>
 					<string>meta.property.object.js</string>
 				</dict>
@@ -2261,31 +2277,31 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(decodeURI|decodeURIComponent|encodeURI|encodeURIComponent|escape|eval|isFinite|isNaN|parseFloat|parseInt|unescape)\b(?=\()</string>
+					<string>(?&lt;!\.)\b(decodeURI|decodeURIComponent|encodeURI|encodeURIComponent|escape|eval|isFinite|isNaN|parseFloat|parseInt|unescape)\b</string>
 					<key>name</key>
 					<string>support.function.js</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(shift|sort|splice|unshift|pop|push|reverse)\b(?=\()</string>
+					<string>\.(shift|sort|splice|unshift|pop|push|reverse)\b</string>
 					<key>name</key>
 					<string>support.function.mutator.js</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b((Eval|Range|Reference|Syntax|Type|URI)?Error)\b</string>
+					<string>(?&lt;!\.)\b((Eval|Range|Reference|Syntax|Type|URI)?Error)\b</string>
 					<key>name</key>
 					<string>support.class.error.js</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(debugger)\b</string>
+					<string>(?&lt;!\.)\b(debugger)\b</string>
 					<key>name</key>
 					<string>keyword.other.js</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(document|window)\b</string>
+					<string>(?&lt;!\.)\b(document|window)\b</string>
 					<key>name</key>
 					<string>support.type.object.dom.js</string>
 				</dict>
@@ -2302,7 +2318,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(console)\b</string>
+					<string>(?&lt;!\.)\b(console)\b</string>
 					<key>name</key>
 					<string>support.type.object.firebug.js</string>
 				</dict>
@@ -2314,13 +2330,13 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(natives|buffer|child_process|cluster|crypto|dgram|dns|fs|http|https|net|os|path|punycode|string|string_decoder|readline|repl|tls|tty|util|vm|zlib)\b</string>
+					<string>(?&lt;!\.)\b(natives|buffer|child_process|cluster|crypto|dgram|dns|fs|http|https|net|os|path|punycode|string|string_decoder|readline|repl|tls|tty|util|vm|zlib)\b</string>
 					<key>name</key>
 					<string>support.module.node.js</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(process|process\.env|global|GLOBAL|root|stdout|stdin|stderr|exports|__dirname|__filename|console)\b</string>
+					<string>(?&lt;!\.)\b(process|process\.(env|stdout|stdin|stderr)|global|GLOBAL|root|exports|__dirname|__filename|console)\b</string>
 					<key>name</key>
 					<string>support.type.object.node.js</string>
 				</dict>
