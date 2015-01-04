@@ -20,7 +20,7 @@ You will need the Sublime [Package Manager](https://sublime.wbond.net/installati
 
 ### Syntax highlighting
 
-JSX syntax highlighting provided by [yungsters/sublime](https://github.com/yungsters/sublime)
+JSX syntax highlighting is provided by [yungsters/sublime](https://github.com/yungsters/sublime) on top of [Benvie/JavaScriptNext](https://github.com/Benvie/JavaScriptNext.tmLanguage).
 
 ![JSX syntax highlighting](https://raw.github.com/jgebhardt/sublime-react/master/docs/img/sr-jsx-out.gif)
 
