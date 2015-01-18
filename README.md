@@ -65,8 +65,6 @@ Snippets are available for both JSX and CJSX ([React CoffeeScript](https://githu
 
     ism→  isMounted()
 
-    jsx→  /** @jsx */
-
   props→  this.props.
 
      pt→  propTypes { ... }
