@@ -1,10 +1,10 @@
 <snippet>
     <content><![CDATA[
-setState(
+@setState(
 	${1}: ${2}
 )
 ]]></content>
     <tabTrigger>sst</tabTrigger>
     <scope>source.coffee</scope>
-    <description>React: setState({...})</description>
+    <description>React: @setState({...})</description>
 </snippet>

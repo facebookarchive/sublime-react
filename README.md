@@ -75,7 +75,7 @@ Snippets are available for both JSX and CJSX ([React CoffeeScript](https://githu
 
     scu→  shouldComponentUpdate: fn(np, ns) { ... }
 
-    sst→  setState({ ... })
+    sst→  this.setState({ ... })
 
   state→  this.state.
 
