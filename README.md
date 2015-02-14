@@ -71,6 +71,8 @@ Snippets are available for both JSX and CJSX ([React CoffeeScript](https://githu
 
     rcc→  component skeleton
 
+   refs→  this.refs.
+
     ren→  render: fn() { return ... }
 
     scu→  shouldComponentUpdate: fn(np, ns) { ... }
@@ -87,7 +89,7 @@ Snippets are available for both JSX and CJSX ([React CoffeeScript](https://githu
 
 ### Rebuilding the docs
 
-After making changes to snippet files, run `npm install && npm run build-docs` to automatically generate this document from source.
+After making changes to snippet files, run `npm install && npm run build-docs` to automatically generate this document from source. **Do not** make changes to README.md directly.
 
 ### Updating JSX syntax highlighting
 

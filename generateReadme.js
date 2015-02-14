@@ -16,7 +16,7 @@ var DOCUMENTATION_TOP =
   'JSX syntax highlighting provided by [yungsters/sublime](https://github.com/yungsters/sublime)\n\n' +
   '![JSX syntax highlighting](https://raw.github.com/jgebhardt/sublime-react/master/docs/img/sr-jsx-out.gif)\n\n' +
   'To default to JSX highlighting, open a `.js` or `.jsx` file, then select from the main menu:\n\n' +
-  '`View` > `Syntax` > `Open all with current extension as...` > `JavaScript (JSX)`\n\n' +
+  '`View` > `Syntax` > `Open all with current extension as...` > `ReactJS` > `JavaScript (JSX)`\n\n' +
   'JSX is fully compatible with plain JavaScript.\n\n' +
   '### Snippets\n\n' +
   'It\'s easy! Simply activate snippets by typing a mnemonic followed by TAB.\n\n' +
@@ -29,7 +29,7 @@ var DOCUMENTATION_BOTTOM =
   '```\n\n' +
   '## Contributing\n\n' +
   '### Rebuilding the docs\n\n' +
-  'After making changes to snippet files, run `npm install && npm run build-docs` to automatically generate this document from source.\n\n' +
+  'After making changes to snippet files, run `npm install && npm run build-docs` to automatically generate this document from source. **Do not** make changes to README.md directly.\n\n' +
   '### Updating JSX syntax highlighting\n\n' +
   'To pull in updates from yungsters/sublime, run:\n\n' +
   '`git subtree pull --prefix syntax/jsx https://github.com/yungsters/sublime.git master --squash`\n\n' +
