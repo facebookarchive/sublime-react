@@ -81,8 +81,6 @@ Snippets are available for both JSX and CJSX ([React CoffeeScript](https://githu
 
   state→  this.state.
 
-    trp→  transferPropsTo( ... )
-
 ```
 
 ## Contributing
