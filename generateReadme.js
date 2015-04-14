@@ -3,7 +3,7 @@ var async = require('async');
 
 var DOCUMENTATION_TOP =
   '# sublime-react\n\n' +
-  'Snippets and syntax highlighting for React.js / JSX.\n\n' +
+  'Snippets for ReactJS. This package used to provide JSX syntax highlighting and has been DEPRECATED in favor of babel/babel-sublime.\n\n' +
   '![alt tag](https://raw.github.com/jgebhardt/sublime-react/master/docs/img/sr-rcc-out.gif)\n\n' +
   '## Installation\n\n' +
   'Install the React package via Sublime\'s Package Manager\n\n' +
@@ -13,11 +13,7 @@ var DOCUMENTATION_TOP =
   '- type `React`, select `ReactJS`\n\n' +
   '## Usage\n\n' +
   '### Syntax highlighting\n\n' +
-  'JSX syntax highlighting provided by [yungsters/sublime](https://github.com/yungsters/sublime)\n\n' +
-  '![JSX syntax highlighting](https://raw.github.com/jgebhardt/sublime-react/master/docs/img/sr-jsx-out.gif)\n\n' +
-  'To default to JSX highlighting, open a `.js` or `.jsx` file, then select from the main menu:\n\n' +
-  '`View` > `Syntax` > `Open all with current extension as...` > `ReactJS` > `JavaScript (JSX)`\n\n' +
-  'JSX is fully compatible with plain JavaScript.\n\n' +
+  '*Syntax highlighting is no longer provided by this packages*. We recommend that you use ([babel-sublime](https://github.com/babel/babel-sublime)) instead.\n\n' +
   '### Snippets\n\n' +
   'It\'s easy! Simply activate snippets by typing a mnemonic followed by TAB.\n\n' +
   '![alt tag](https://raw.github.com/jgebhardt/sublime-react/master/docs/img/sr-snippets-out.gif)\n\n' +
@@ -30,9 +26,6 @@ var DOCUMENTATION_BOTTOM =
   '## Contributing\n\n' +
   '### Rebuilding the docs\n\n' +
   'After making changes to snippet files, run `npm install && npm run build-docs` to automatically generate this document from source. **Do not** make changes to README.md directly.\n\n' +
-  '### Updating JSX syntax highlighting\n\n' +
-  'To pull in updates from yungsters/sublime, run:\n\n' +
-  '`git subtree pull --prefix syntax/jsx https://github.com/yungsters/sublime.git master --squash`\n\n' +
   '### Contributor License Agreement\n\n' +
   'Contributions are very welcome, but we ask that you please fill out our ' +
   '[CLA](https://code.facebook.com/cla) in order for us to accept your pull request.\n\n';

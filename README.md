@@ -1,6 +1,6 @@
 # sublime-react
 
-Snippets and syntax highlighting for React.js / JSX.
+Snippets for ReactJS. This package used to provide JSX syntax highlighting and has been DEPRECATED in favor of babel/babel-sublime.
 
 ![alt tag](https://raw.github.com/jgebhardt/sublime-react/master/docs/img/sr-rcc-out.gif)
 
@@ -20,15 +20,7 @@ You will need the Sublime [Package Manager](https://sublime.wbond.net/installati
 
 ### Syntax highlighting
 
-JSX syntax highlighting provided by [yungsters/sublime](https://github.com/yungsters/sublime)
-
-![JSX syntax highlighting](https://raw.github.com/jgebhardt/sublime-react/master/docs/img/sr-jsx-out.gif)
-
-To default to JSX highlighting, open a `.js` or `.jsx` file, then select from the main menu:
-
-`View` > `Syntax` > `Open all with current extension as...` > `ReactJS` > `JavaScript (JSX)`
-
-JSX is fully compatible with plain JavaScript.
+*Syntax highlighting is no longer provided by this packages*. We recommend that you use ([babel-sublime](https://github.com/babel/babel-sublime)) instead.
 
 ### Snippets
 
@@ -88,12 +80,6 @@ Snippets are available for both JSX and CJSX ([React CoffeeScript](https://githu
 ### Rebuilding the docs
 
 After making changes to snippet files, run `npm install && npm run build-docs` to automatically generate this document from source. **Do not** make changes to README.md directly.
-
-### Updating JSX syntax highlighting
-
-To pull in updates from yungsters/sublime, run:
-
-`git subtree pull --prefix syntax/jsx https://github.com/yungsters/sublime.git master --squash`
 
 ### Contributor License Agreement
 

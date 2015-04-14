@@ -1,0 +1,17 @@
+=== Sublime-react Deprecation notice ===
+
+Sublime-react no longer ships with JSX syntax highlighting, having been superseded by the more robust Babel package, which properly supports ES6 and JSX syntax.
+The Sublime-react package has been deprecated and will only contain snippets going forward.
+
+We recommend that you install the Babel package through Package Control (It's much more awesome).
+
+  _           _        _ _                    _                          ____        _          _
+ (_)         | |      | | |                  | |                     _  |  _ \      | |        | |
+  _ _ __  ___| |_ __ _| | |  _ __   __ _  ___| | ____ _  __ _  ___  (_) | |_) | __ _| |__   ___| |
+ | | '_ \/ __| __/ _` | | | | '_ \ / _` |/ __| |/ / _` |/ _` |/ _ \     |  _ < / _` | '_ \ / _ | |
+ | | | | \__ | || (_| | | | | |_) | (_| | (__|   | (_| | (_| |  __/  _  | |_) | (_| | |_) |  __| |
+ |_|_| |_|___/\__\__,_|_|_| | .__/ \__,_|\___|_|\_\__,_|\__, |\___| (_) |____/ \__,_|_.__/ \___|_|
+                            | |                          __/ |
+                            |_|                         |___/
+
+Thank you & happy hacking!
