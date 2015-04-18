@@ -49,6 +49,8 @@ Snippets are available for both JSX and CJSX ([React CoffeeScript](https://githu
 
      cx→  cx({ ... })
 
+    fdn→  React.findDOMNode(...)
+
     fup→  forceUpdate(...)
 
     gdp→  getDefaultProps: fn() { return {...} } 
