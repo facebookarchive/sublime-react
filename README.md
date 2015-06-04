@@ -1,6 +1,6 @@
 # sublime-react
 
-Snippets for ReactJS. This package used to provide JSX syntax highlighting and has been DEPRECATED in favor of [babel/babel-sublime](https://github.com/babel/babel-sublime).
+Snippets for ReactJS. This package used to provide JSX syntax highlighting and has been DEPRECATED in favor of babel/babel-sublime.
 
 ![alt tag](https://raw.github.com/jgebhardt/sublime-react/master/docs/img/sr-rcc-out.gif)
 
