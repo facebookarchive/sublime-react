@@ -65,7 +65,9 @@ Snippets are available for both JSX and CJSX ([React CoffeeScript](https://githu
 
      pt→  propTypes { ... }
 
-    pta→  PropTypes.array
+    pta→  PropTypes.arrayOf
+
+   ptai→  PropTypes.arrayOf (Instances)
 
     ptb→  PropTypes.bool
 
@@ -75,15 +77,15 @@ Snippets are available for both JSX and CJSX ([React CoffeeScript](https://githu
 
     pti→  PropTypes.instanceOf
 
-    ptn→  PropTypes.node
-
     ptn→  PropTypes.number
+
+    ptn→  PropTypes.node
 
     pto→  PropTypes.object
 
-   ptof→  PropTypes.objectOf
-
    ptof→  PropTypes.oneOf (Enum)
+
+   ptof→  PropTypes.objectOf
 
   ptoft→  PropTypes.oneOfType (Union)
 

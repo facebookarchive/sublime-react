@@ -1,8 +1,8 @@
 <snippet>
     <content><![CDATA[
-${1}: React.PropTypes.array${2:.isRequired}$0
+${1}: React.PropTypes.arrayOf(${2:propType})${3:.isRequired}$0
 ]]></content>
     <tabTrigger>pta</tabTrigger>
     <scope>source.coffee</scope>
-    <description>React: PropTypes.array</description>
+    <description>React: PropTypes.arrayOf</description>
 </snippet>
