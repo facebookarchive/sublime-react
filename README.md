@@ -65,6 +65,32 @@ Snippets are available for both JSX and CJSX ([React CoffeeScript](https://githu
 
      pt→  propTypes { ... }
 
+    pta→  React.PropTypes.array
+
+    ptb→  React.PropTypes.bool
+
+    pte→  React.PropTypes.element
+
+    ptf→  React.PropTypes.func
+
+    pti→  React.PropTypes.instanceOf
+
+    ptn→  React.PropTypes.node
+
+    ptn→  React.PropTypes.number
+
+   ptof→  React.PropTypes.objectOf
+
+   ptof→  React.PropTypes.oneOf
+
+  ptoft→  React.PropTypes.oneOfType
+
+    pto→  React.PropTypes.object
+
+   ptsp→  React.PropTypes.shape
+
+    pts→  React.PropTypes.string
+
     rcc→  component skeleton
 
    refs→  this.refs.

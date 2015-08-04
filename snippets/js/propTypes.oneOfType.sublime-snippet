@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+${1}: React.PropTypes.oneOfType([${2:value}, ${3:value}])${4:.isRequired}$0
+]]></content>
+    <tabTrigger>ptoft</tabTrigger>
+    <scope>source.js</scope>
+    <description>React: PropTypes.oneOfType (Union)</description>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+${1}: React.PropTypes.shape({
+  $0
+})
+]]></content>
+    <tabTrigger>ptsp</tabTrigger>
+    <scope>source.js</scope>
+    <description>React: PropTypes.shape</description>
+</snippet>
