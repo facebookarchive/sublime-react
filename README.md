@@ -39,6 +39,8 @@ Snippets are available for both JSX and CJSX ([React CoffeeScript](https://githu
 
      cs→  var cx = React.addons.classSet;
 
+     ctx→  this.context.
+
     cwm→  componentWillMount: fn() { ... }
 
     cwr→  componentWillReceiveProps: fn(np) { ... }
@@ -53,9 +55,9 @@ Snippets are available for both JSX and CJSX ([React CoffeeScript](https://githu
 
     fup→  forceUpdate(...)
 
-    gdp→  getDefaultProps: fn() { return {...} } 
+    gdp→  getDefaultProps: fn() { return {...} }
 
-    gis→  getInitialState: fn() { return {...} } 
+    gis→  getInitialState: fn() { return {...} }
 
     ism→  isMounted()
 
