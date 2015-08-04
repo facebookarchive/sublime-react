@@ -1,6 +1,6 @@
 # sublime-react
 
-Snippets for ReactJS. This package used to provide JSX syntax highlighting and has been DEPRECATED in favor of [babel/babel-sublime](https://github.com/babel/babel-sublime).
+Snippets for ReactJS. This package used to provide JSX syntax highlighting and has been DEPRECATED in favor of babel/babel-sublime.
 
 ![alt tag](https://raw.github.com/jgebhardt/sublime-react/master/docs/img/sr-rcc-out.gif)
 
@@ -39,7 +39,7 @@ Snippets are available for both JSX and CJSX ([React CoffeeScript](https://githu
 
      cs→  var cx = React.addons.classSet;
 
-     ctx→  this.context.
+    ctx→  this.context.
 
     cwm→  componentWillMount: fn() { ... }
 
@@ -55,9 +55,9 @@ Snippets are available for both JSX and CJSX ([React CoffeeScript](https://githu
 
     fup→  forceUpdate(...)
 
-    gdp→  getDefaultProps: fn() { return {...} }
+    gdp→  getDefaultProps: fn() { return {...} } 
 
-    gis→  getInitialState: fn() { return {...} }
+    gis→  getInitialState: fn() { return {...} } 
 
     ism→  isMounted()
 
@@ -65,31 +65,31 @@ Snippets are available for both JSX and CJSX ([React CoffeeScript](https://githu
 
      pt→  propTypes { ... }
 
-    pta→  React.PropTypes.array
+    pta→  PropTypes.array
 
-    ptb→  React.PropTypes.bool
+    ptb→  PropTypes.bool
 
-    pte→  React.PropTypes.element
+    pte→  PropTypes.element
 
-    ptf→  React.PropTypes.func
+    ptf→  PropTypes.func
 
-    pti→  React.PropTypes.instanceOf
+    pti→  PropTypes.instanceOf
 
-    ptn→  React.PropTypes.node
+    ptn→  PropTypes.node
 
-    ptn→  React.PropTypes.number
+    ptn→  PropTypes.number
 
-   ptof→  React.PropTypes.objectOf
+    pto→  PropTypes.object
 
-   ptof→  React.PropTypes.oneOf
+   ptof→  PropTypes.objectOf
 
-  ptoft→  React.PropTypes.oneOfType
+   ptof→  PropTypes.oneOf (Enum)
 
-    pto→  React.PropTypes.object
+  ptoft→  PropTypes.oneOfType (Union)
 
-   ptsp→  React.PropTypes.shape
+    pts→  PropTypes.string
 
-    pts→  React.PropTypes.string
+   ptsp→  PropTypes.shape
 
     rcc→  component skeleton
 
