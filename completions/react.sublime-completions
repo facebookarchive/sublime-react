@@ -1,7 +1,3 @@
-// Usage:
-// Go to `Sublime Text > Browse Packages`
-// Place the file under `User` directory
-
 {
   "scope": "source.js",
 
@@ -57,11 +53,11 @@
     { "trigger": "setState\tReact", "contents": "setState($0)" },
     { "trigger": "replaceState\tReact", "contents": "replaceState($0)" },
     { "trigger": "forceUpdate\tReact", "contents": "forceUpdate($0)" },
-    
+
     { "trigger": "isMounted\tReact (ES5 only)", "contents": "isMounted()$0" },
     { "trigger": "setProps\tReact (ES5 only)", "contents": "setProps($0)" },
     { "trigger": "replaceProps\tReact (ES5 only)", "contents": "replaceProps($0)" },
-    
+
     { "trigger": "getDOMNode\tReact (Deprecated)", "contents": "getDOMNode()$0" },
 
 
@@ -71,7 +67,7 @@
     { "trigger": "propTypes\tReact", "contents": "propTypes" },
     { "trigger": "statics\tReact", "contents": "statics" },
     { "trigger": "displayName\tReact", "contents": "displayName" },
-    
+
     { "trigger": "mixins\tReact (ES5 only)", "contents": "mixins" },
     { "trigger": "getInitialState\tReact (ES5 only)", "contents": "getInitialState() {\n\t$0\n}" },
     { "trigger": "getDefaultProps\tReact (ES5 only)", "contents": "getDefaultProps() {\n\t$0\n}" },
