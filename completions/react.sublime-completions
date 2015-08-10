@@ -1,0 +1,187 @@
+// Usage:
+// Go to `Sublime Text > Browse Packages`
+// Place the file under `User` directory
+
+{
+  "scope": "source.js",
+
+  "completions":
+  [
+    // Top-level API
+    { "trigger": "React.Component\tReact", "contents": "React.Component" },
+    { "trigger": "React.createClass\tReact", "contents": "React.createClass({\n\t$0\n})" },
+    { "trigger": "React.createElement\tReact", "contents": "React.createElement($0)" },
+    { "trigger": "React.cloneElement\tReact", "contents": "React.cloneElement($0)" },
+    { "trigger": "React.createFactory\tReact", "contents": "React.createFactory($0)" },
+    { "trigger": "React.render\tReact", "contents": "React.render($0)" },
+    { "trigger": "React.unmountComponentAtNode\tReact", "contents": "React.unmountComponentAtNode($0)" },
+    { "trigger": "React.renderToString\tReact", "contents": "React.renderToString($0)" },
+    { "trigger": "React.renderToStaticMarkup\tReact", "contents": "React.renderToStaticMarkup($0)" },
+    { "trigger": "React.isValidElement\tReact", "contents": "React.isValidElement($0)" },
+    { "trigger": "React.findDOMNode\tReact", "contents": "React.findDOMNode($0)" },
+    { "trigger": "React.initializeTouchEvents\tReact", "contents": "React.initializeTouchEvents($0)" },
+
+
+    // Children
+    { "trigger": "Children.\tReact", "contents": "Children." },
+
+    { "trigger": "Children.map\tReact", "contents": "Children.map($0)" },
+    { "trigger": "Children.forEach\tReact", "contents": "Children.forEach($0)" },
+    { "trigger": "Children.count\tReact", "contents": "Children.count($0)" },
+    { "trigger": "Children.only\tReact", "contents": "Children.only($0)" },
+
+
+    // PropTypes
+    { "trigger": "PropTypes.\tReact", "contents": "PropTypes." },
+
+    { "trigger": "PropTypes.any\tReact", "contents": "PropTypes.any" },
+    { "trigger": "PropTypes.array\tReact", "contents": "PropTypes.array" },
+    { "trigger": "PropTypes.bool\tReact", "contents": "PropTypes.bool" },
+    { "trigger": "PropTypes.func\tReact", "contents": "PropTypes.func" },
+    { "trigger": "PropTypes.number\tReact", "contents": "PropTypes.number" },
+    { "trigger": "PropTypes.object\tReact", "contents": "PropTypes.object" },
+    { "trigger": "PropTypes.string\tReact", "contents": "PropTypes.string" },
+    { "trigger": "PropTypes.node\tReact", "contents": "PropTypes.node" },
+    { "trigger": "PropTypes.element\tReact", "contents": "PropTypes.element" },
+    { "trigger": "PropTypes.arrayOf\tReact", "contents": "PropTypes.arrayOf($0)" },
+    { "trigger": "PropTypes.objectOf\tReact", "contents": "PropTypes.objectOf($0)" },
+    { "trigger": "PropTypes.instanceOf\tReact", "contents": "PropTypes.instanceOf($0)" },
+    { "trigger": "PropTypes.oneOf\tReact", "contents": "PropTypes.oneOf([ $0 ])" },
+    { "trigger": "PropTypes.oneOfType\tReact", "contents": "PropTypes.oneOfType([ $0 ])" },
+    { "trigger": "PropTypes.shape\tReact", "contents": "PropTypes.shape({ $0 })" },
+
+    { "trigger": "isRequired\tReact", "contents": "isRequired" },
+
+
+    // Component API
+    { "trigger": "setState\tReact", "contents": "setState($0)" },
+    { "trigger": "replaceState\tReact", "contents": "replaceState($0)" },
+    { "trigger": "forceUpdate\tReact", "contents": "forceUpdate($0)" },
+    
+    { "trigger": "isMounted\tReact (ES5 only)", "contents": "isMounted()$0" },
+    { "trigger": "setProps\tReact (ES5 only)", "contents": "setProps($0)" },
+    { "trigger": "replaceProps\tReact (ES5 only)", "contents": "replaceProps($0)" },
+    
+    { "trigger": "getDOMNode\tReact (Deprecated)", "contents": "getDOMNode()$0" },
+
+
+    // Component specs
+    { "trigger": "render\tReact", "contents": "render() {\n\t$0\n}" },
+    { "trigger": "defaultProps\tReact", "contents": "defaultProps" },
+    { "trigger": "propTypes\tReact", "contents": "propTypes" },
+    { "trigger": "statics\tReact", "contents": "statics" },
+    { "trigger": "displayName\tReact", "contents": "displayName" },
+    
+    { "trigger": "mixins\tReact (ES5 only)", "contents": "mixins" },
+    { "trigger": "getInitialState\tReact (ES5 only)", "contents": "getInitialState() {\n\t$0\n}" },
+    { "trigger": "getDefaultProps\tReact (ES5 only)", "contents": "getDefaultProps() {\n\t$0\n}" },
+
+
+    // Lifecycle methods
+    { "trigger": "componentWillMount\tReact", "contents": "componentWillMount() {\n\t$0\n}" },
+    { "trigger": "componentDidMount\tReact", "contents": "componentDidMount() {\n\t$0\n}" },
+    { "trigger": "componentWillReceiveProps\tReact", "contents": "componentWillReceiveProps(nextProps) {\n\t$0\n}" },
+    { "trigger": "shouldComponentUpdate\tReact", "contents": "shouldComponentUpdate(nextProps, nextState) {\n\t$0\n}" },
+    { "trigger": "componentWillUpdate\tReact", "contents": "componentWillUpdate(nextProps, nextState) {\n\t$0\n}" },
+    { "trigger": "componentDidUpdate\tReact", "contents": "componentDidUpdate(prevProps, prevState) {\n\t$0\n}" },
+    { "trigger": "componentWillUnmount\tReact", "contents": "componentWillUnmount() {\n\t$0\n}" },
+
+
+    // Synthetic events
+    { "trigger": "onCopy\tSyntheticEvent", "contents": "onCopy" },
+    { "trigger": "onCut\tSyntheticEvent", "contents": "onCut" },
+    { "trigger": "onPaste\tSyntheticEvent", "contents": "onPaste" },
+
+    { "trigger": "onKeyDown\tSyntheticEvent", "contents": "onKeyDown" },
+    { "trigger": "onKeyPress\tSyntheticEvent", "contents": "onKeyPress" },
+    { "trigger": "onKeyUp\tSyntheticEvent", "contents": "onKeyUp" },
+
+    { "trigger": "onFocus\tSyntheticEvent", "contents": "onFocus" },
+    { "trigger": "onBlur\tSyntheticEvent", "contents": "onBlur" },
+
+    { "trigger": "onChange\tSyntheticEvent", "contents": "onChange" },
+    { "trigger": "onInput\tSyntheticEvent", "contents": "onInput" },
+    { "trigger": "onSubmit\tSyntheticEvent", "contents": "onSubmit" },
+
+    { "trigger": "onClick\tSyntheticEvent", "contents": "onClick" },
+    { "trigger": "onContextMenu\tSyntheticEvent", "contents": "onContextMenu" },
+    { "trigger": "onDoubleClick\tSyntheticEvent", "contents": "onDoubleClick" },
+    { "trigger": "onDrag\tSyntheticEvent", "contents": "onDrag" },
+    { "trigger": "onDragEnd\tSyntheticEvent", "contents": "onDragEnd" },
+    { "trigger": "onDragEnter\tSyntheticEvent", "contents": "onDragEnter" },
+    { "trigger": "onDragExit\tSyntheticEvent", "contents": "onDragExit" },
+    { "trigger": "onDragLeave\tSyntheticEvent", "contents": "onDragLeave" },
+    { "trigger": "onDragOver\tSyntheticEvent", "contents": "onDragOver" },
+    { "trigger": "onDragStart\tSyntheticEvent", "contents": "onDragStart" },
+    { "trigger": "onDrop\tSyntheticEvent", "contents": "onDrop" },
+    { "trigger": "onMouseDown\tSyntheticEvent", "contents": "onMouseDown" },
+    { "trigger": "onMouseEnter\tSyntheticEvent", "contents": "onMouseEnter" },
+    { "trigger": "onMouseLeave\tSyntheticEvent", "contents": "onMouseLeave" },
+    { "trigger": "onMouseMove\tSyntheticEvent", "contents": "onMouseMove" },
+    { "trigger": "onMouseOut\tSyntheticEvent", "contents": "onMouseOut" },
+    { "trigger": "onMouseOver\tSyntheticEvent", "contents": "onMouseOver" },
+    { "trigger": "onMouseUp\tSyntheticEvent", "contents": "onMouseUp" },
+
+    { "trigger": "onTouchCancel\tSyntheticEvent", "contents": "onTouchCancel" },
+    { "trigger": "onTouchEnd\tSyntheticEvent", "contents": "onTouchEnd" },
+    { "trigger": "onTouchMove\tSyntheticEvent", "contents": "onTouchMove" },
+    { "trigger": "onTouchStart\tSyntheticEvent", "contents": "onTouchStart" },
+
+    { "trigger": "onScroll\tSyntheticEvent", "contents": "onScroll" },
+
+    { "trigger": "onWheel\tSyntheticEvent", "contents": "onWheel" },
+
+
+    // Event attributes
+    { "trigger": "bubbles\tboolean", "contents": "bubbles" },
+    { "trigger": "cancelable\tboolean", "contents": "cancelable" },
+    { "trigger": "currentTarget\tDOMEventTarget", "contents": "currentTarget" },
+    { "trigger": "defaultPrevented\tboolean", "contents": "defaultPrevented" },
+    { "trigger": "eventPhase\tNumber", "contents": "eventPhase" },
+    { "trigger": "isTrusted\tboolean", "contents": "isTrusted" },
+    { "trigger": "nativeEvent\tDOMEvent", "contents": "nativeEvent" },
+    { "trigger": "preventDefault\tfunction", "contents": "preventDefault()$0" },
+    { "trigger": "stopPropagation\tfunction", "contents": "stopPropagation()$0" },
+    { "trigger": "target\tDOMEventTarget", "contents": "target" },
+    { "trigger": "timeStamp\tNumber", "contents": "timeStamp" },
+    { "trigger": "type\tString", "contents": "type" },
+
+    { "trigger": "clipboardData\tDOMDataTransfer", "contents": "clipboardData" },
+
+    { "trigger": "altKey\tboolean", "contents": "altKey" },
+    { "trigger": "charCode\tNumber", "contents": "charCode" },
+    { "trigger": "ctrlKey\tboolean", "contents": "ctrlKey" },
+    { "trigger": "getModifierState\tfunction", "contents": "getModifierState($0)" },
+    { "trigger": "key\tString", "contents": "key" },
+    { "trigger": "keyCode\tNumber", "contents": "keyCode" },
+    { "trigger": "locale\tString", "contents": "locale" },
+    { "trigger": "location\tNumber", "contents": "location" },
+    { "trigger": "metaKey\tboolean", "contents": "metaKey" },
+    { "trigger": "repeat\tboolean", "contents": "repeat" },
+    { "trigger": "shiftKey\tboolean", "contents": "shiftKey" },
+    { "trigger": "which\tNumber", "contents": "which" },
+
+    { "trigger": "relatedTarget\tDOMEventTarget", "contents": "relatedTarget" },
+
+    { "trigger": "button\tNumber", "contents": "button" },
+    { "trigger": "buttons\tNumber", "contents": "buttons" },
+    { "trigger": "clientX\tNumber", "contents": "clientX" },
+    { "trigger": "clientY\tNumber", "contents": "clientY" },
+    { "trigger": "pageX\tNumber", "contents": "pageX" },
+    { "trigger": "pageY\tNumber", "contents": "pageY" },
+    { "trigger": "screenX\tNumber", "contents": "screenX" },
+    { "trigger": "screenY\tNumber", "contents": "screenY" },
+
+    { "trigger": "changedTouches\tDOMTouchList", "contents": "changedTouches" },
+    { "trigger": "targetTouches\tDOMTouchList", "contents": "targetTouches" },
+    { "trigger": "touches\tDOMTouchList", "contents": "touches" },
+
+    { "trigger": "detail\tNumber", "contents": "detail" },
+    { "trigger": "view\tDOMAbstractView", "contents": "view" },
+
+    { "trigger": "deltaMode\tNumber", "contents": "deltaMode" },
+    { "trigger": "deltaX\tNumber", "contents": "deltaX" },
+    { "trigger": "deltaY\tNumber", "contents": "deltaY" },
+    { "trigger": "deltaZ\tNumber", "contents": "deltaZ" }
+  ]
+}
