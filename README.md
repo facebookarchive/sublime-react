@@ -14,7 +14,7 @@ You will need the Sublime [Package Manager](https://sublime.wbond.net/installati
 
 - type `install`, select `Package Control: Install Package`
 
-- type `React`, select `ReactJS`
+- type `React`, select `React ES6 Snippets`
 
 ## Usage
 
@@ -64,6 +64,8 @@ Snippets are available for both JSX and CJSX ([React CoffeeScript](https://githu
      pt→  propTypes { ... }
 
     rcc→  es6 component class skeleton
+    
+    rrc→  es6 connected component class skeleton
 
    refs→  this.refs.
 
