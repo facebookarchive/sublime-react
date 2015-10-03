@@ -9,9 +9,9 @@ function mapStateToProps(state) {
   }
 }
 
-export default class ${1:${TM_FILENAME/(.?\w*)(?:\.\w+)*$/$1/g}} extends React.Component {
+export class ${1:${TM_FILENAME/(.?\w*)(?:\.\w+)*$/$1/g}} extends React.Component {
   static propTypes = {
-    ${3:name}: React.PropTypes.${4:string},
+    ${2:name}: React.PropTypes.${3:string},
   }
 
   constructor(props) {
@@ -20,10 +20,15 @@ export default class ${1:${TM_FILENAME/(.?\w*)(?:\.\w+)*$/$1/g}} extends React.C
 
   render() {
     return (
-      <${5:div}></${5:div}>
+      <${4:div}></${4:div}>
     );
   }
 }
+
+export default connect(
+  mapStateToProps,
+// Implement map dispatch to props
+)(${1:${TM_FILENAME/(.?\w*)(?:\.\w+)*$/$1/g}})
 
 ]]></content>
     <tabTrigger>rrc</tabTrigger>
