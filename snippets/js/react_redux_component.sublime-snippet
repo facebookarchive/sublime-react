@@ -33,5 +33,5 @@ export default connect(
 ]]></content>
     <tabTrigger>rrc</tabTrigger>
     <scope>source.js</scope>
-    <description>React: component skeleton</description>
+    <description>React: redux component skeleton</description>
 </snippet>

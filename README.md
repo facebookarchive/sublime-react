@@ -1,8 +1,8 @@
 # sublime-react
 
-Snippets for ReactJS. This package used to provide JSX syntax highlighting and has been DEPRECATED in favor of [babel/babel-sublime](https://github.com/babel/babel-sublime).
+Snippets for ReactJS. This package used to provide JSX syntax highlighting and has been DEPRECATED in favor of babel/babel-sublime.
 
-![alt tag](https://raw.github.com/jgebhardt/sublime-react/master/docs/img/sr-rcc-out.gif)
+![alt tag](https://raw.githubusercontent.com/mboperator/sublime-react/master/docs/img/sr-rcc-out.gif)
 
 ## Installation
 
@@ -14,7 +14,7 @@ You will need the Sublime [Package Manager](https://sublime.wbond.net/installati
 
 - type `install`, select `Package Control: Install Package`
 
-- type `React`, select `ReactJS`
+- type `React`, select `React ES6 Snippets`
 
 ## Usage
 
@@ -37,7 +37,7 @@ Snippets are available for both JSX and CJSX ([React CoffeeScript](https://githu
 
    cdup→  componentDidUpdate: fn(pp, ps) { ... }
 
-     cs→  var cx = React.addons.classSet;
+     cs→  import cx from 'classnames';
 
     cwm→  componentWillMount: fn() { ... }
 
@@ -53,9 +53,9 @@ Snippets are available for both JSX and CJSX ([React CoffeeScript](https://githu
 
     fup→  forceUpdate(...)
 
-    gdp→  getDefaultProps: fn() { return {...} } 
+    gdp→  static defaultProps = { ... }
 
-    gis→  getInitialState: fn() { return {...} } 
+    gis→  getInitialState: fn() { return {...} }
 
     ism→  isMounted()
 
@@ -68,6 +68,8 @@ Snippets are available for both JSX and CJSX ([React CoffeeScript](https://githu
    refs→  this.refs.
 
     ren→  render: fn() { return ... }
+
+    rrc→  redux component skeleton
 
     scu→  shouldComponentUpdate: fn(np, ns) { ... }
 
