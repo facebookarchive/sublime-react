@@ -2,7 +2,7 @@
 
 Snippets for ReactJS. This package used to provide JSX syntax highlighting and has been DEPRECATED in favor of [babel/babel-sublime](https://github.com/babel/babel-sublime).
 
-![alt tag](https://raw.github.com/jgebhardt/sublime-react/master/docs/img/sr-rcc-out.gif)
+![alt tag](https://raw.githubusercontent.com/mboperator/sublime-react/master/docs/img/sr-rcc-out.gif)
 
 ## Installation
 
@@ -33,29 +33,29 @@ Snippets are available for both JSX and CJSX ([React CoffeeScript](https://githu
 #### Documentation of available snippets (JSX):
 
 ```
-    cdm→  componentDidMount: fn() { ... }
+    cdm→  componentDidMount() { ... }
 
-   cdup→  componentDidUpdate: fn(pp, ps) { ... }
+   cdup→  componentDidUpdate(pp, ps) { ... }
 
-     cs→  var cx = React.addons.classSet;
+     cs→  import cx from 'classnames';
 
-    cwm→  componentWillMount: fn() { ... }
+    cwm→  componentWillMount() { ... }
 
-    cwr→  componentWillReceiveProps: fn(np) { ... }
+    cwr→  componentWillReceiveProps(np) { ... }
 
-    cwu→  componentWillUpdate: fn(np, ns) { ... }
+    cwu→  componentWillUpdate(np, ns) { ... }
 
-   cwun→  componentWillUnmount: fn() { ... }
+   cwun→  componentWillUnmount() { ... }
 
      cx→  cx({ ... })
 
     fdn→  React.findDOMNode(...)
 
-    fup→  forceUpdate(...)
+    fup→  forceUpdate(() => {...})
 
-    gdp→  getDefaultProps: fn() { return {...} } 
+    gdp→  static defaultProps { ... } 
 
-    gis→  getInitialState: fn() { return {...} } 
+    gis→  state = { ... } 
 
     ism→  isMounted()
 
@@ -63,13 +63,13 @@ Snippets are available for both JSX and CJSX ([React CoffeeScript](https://githu
 
      pt→  propTypes { ... }
 
-    rcc→  component skeleton
+    rcc→  es6 component class skeleton
 
    refs→  this.refs.
 
-    ren→  render: fn() { return ... }
+    ren→  render() { return ... }
 
-    scu→  shouldComponentUpdate: fn(np, ns) { ... }
+    scu→  shouldComponentUpdate(np, ns) { ... }
 
     sst→  this.setState({ ... })
 
