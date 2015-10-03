@@ -1,6 +1,13 @@
 <snippet>
     <content><![CDATA[
 import React from 'react';
+import { connect } from 'react-redux';
+
+function mapStateToProps(state) {
+  return {
+
+  }
+}
 
 export default class ${1:${TM_FILENAME/(.?\w*)(?:\.\w+)*$/$1/g}} extends React.Component {
   static propTypes = {
@@ -19,7 +26,7 @@ export default class ${1:${TM_FILENAME/(.?\w*)(?:\.\w+)*$/$1/g}} extends React.C
 }
 
 ]]></content>
-    <tabTrigger>rcc</tabTrigger>
+    <tabTrigger>rrc</tabTrigger>
     <scope>source.js</scope>
     <description>React: component skeleton</description>
 </snippet>

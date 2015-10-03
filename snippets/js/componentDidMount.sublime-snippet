@@ -1,8 +1,8 @@
 <snippet>
     <content><![CDATA[
-componentDidMount: function() {
+componentDidMount() {
 	${1}
-},
+}
 ]]></content>
     <tabTrigger>cdm</tabTrigger>
     <scope>source.js</scope>
