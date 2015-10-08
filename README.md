@@ -1,7 +1,5 @@
 # sublime-react
 
-Snippets for ReactJS. This package used to provide JSX syntax highlighting and has been DEPRECATED in favor of babel/babel-sublime.
-
 ![alt tag](https://raw.githubusercontent.com/mboperator/sublime-react/master/docs/img/sr-rcc-out.gif)
 
 ## Installation
@@ -14,7 +12,7 @@ You will need the Sublime [Package Manager](https://sublime.wbond.net/installati
 
 - type `install`, select `Package Control: Install Package`
 
-- type `React`, select `React ES6 Snippets`
+- type `React`, select `ReactJS`
 
 ## Usage
 
@@ -26,9 +24,7 @@ You will need the Sublime [Package Manager](https://sublime.wbond.net/installati
 
 It's easy! Simply activate snippets by typing a mnemonic followed by TAB.
 
-![alt tag](https://raw.github.com/jgebhardt/sublime-react/master/docs/img/sr-snippets-out.gif)
-
-Snippets are available for both JSX and CJSX ([React CoffeeScript](https://github.com/jsdf/coffee-react-transform)).
+![alt tag](https://raw.githubusercontent.com/mboperator/sublime-react/master/docs/img/sr-rcc-snippets-out.gif)
 
 #### Documentation of available snippets (JSX):
 
@@ -53,9 +49,9 @@ Snippets are available for both JSX and CJSX ([React CoffeeScript](https://githu
 
     fup→  forceUpdate(...)
 
-    gdp→  static defaultProps = { ... }
+    gdp→  static defaultProps = { ... } 
 
-    gis→  getInitialState: fn() { return {...} }
+    gis→  getInitialState: fn() { return {...} } 
 
     ism→  isMounted()
 
@@ -84,8 +80,4 @@ Snippets are available for both JSX and CJSX ([React CoffeeScript](https://githu
 ### Rebuilding the docs
 
 After making changes to snippet files, run `npm install && npm run build-docs` to automatically generate this document from source. **Do not** make changes to README.md directly.
-
-### Contributor License Agreement
-
-Contributions are very welcome, but we ask that you please fill out our [CLA](https://code.facebook.com/cla) in order for us to accept your pull request.
 

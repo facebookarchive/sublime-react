@@ -3,8 +3,7 @@ var async = require('async');
 
 var DOCUMENTATION_TOP =
   '# sublime-react\n\n' +
-  'Snippets for ReactJS. This package used to provide JSX syntax highlighting and has been DEPRECATED in favor of babel/babel-sublime.\n\n' +
-  '![alt tag](https://raw.github.com/jgebhardt/sublime-react/master/docs/img/sr-rcc-out.gif)\n\n' +
+  '![alt tag](https://raw.githubusercontent.com/mboperator/sublime-react/master/docs/img/sr-rcc-out.gif)\n\n' +
   '## Installation\n\n' +
   'Install the React package via Sublime\'s Package Manager\n\n' +
   'You will need the Sublime [Package Manager](https://sublime.wbond.net/installation).\n\n' +
@@ -16,8 +15,7 @@ var DOCUMENTATION_TOP =
   '*Syntax highlighting is no longer provided by this packages*. We recommend that you use ([babel-sublime](https://github.com/babel/babel-sublime)) instead.\n\n' +
   '### Snippets\n\n' +
   'It\'s easy! Simply activate snippets by typing a mnemonic followed by TAB.\n\n' +
-  '![alt tag](https://raw.github.com/jgebhardt/sublime-react/master/docs/img/sr-snippets-out.gif)\n\n' +
-  'Snippets are available for both JSX and CJSX ([React CoffeeScript](https://github.com/jsdf/coffee-react-transform)).\n\n' +
+  '![alt tag](https://raw.githubusercontent.com/mboperator/sublime-react/master/docs/img/sr-rcc-snippets-out.gif)\n\n' +
   '#### Documentation of available snippets (JSX):\n\n' +
   '```\n';
 
@@ -25,10 +23,7 @@ var DOCUMENTATION_BOTTOM =
   '```\n\n' +
   '## Contributing\n\n' +
   '### Rebuilding the docs\n\n' +
-  'After making changes to snippet files, run `npm install && npm run build-docs` to automatically generate this document from source. **Do not** make changes to README.md directly.\n\n' +
-  '### Contributor License Agreement\n\n' +
-  'Contributions are very welcome, but we ask that you please fill out our ' +
-  '[CLA](https://code.facebook.com/cla) in order for us to accept your pull request.\n\n';
+  'After making changes to snippet files, run `npm install && npm run build-docs` to automatically generate this document from source. **Do not** make changes to README.md directly.\n\n';
 
 fs.readdir('./snippets/js', function(err, files) {
   var snippets = files.filter(function(file) {
