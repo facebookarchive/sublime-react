@@ -1,4 +1,16 @@
-# sublime-react
+# sublime-react-es6
+
+This is a fork of Facebook's original ReactJS Sublime Package.
+
+The main changes I've made include:
+
+- Converting function declarations to the new ES6 shorthand.
+
+- Static class variables (defaultProps, propTypes) are declared using ES7 property intializers.
+
+- ES6 style exports and imports for component creating snippets.
+
+- Added `rrc` for Redux connected components.
 
 ![alt tag](https://raw.githubusercontent.com/mboperator/sublime-react/master/docs/img/sr-rcc-out.gif)
 

@@ -2,7 +2,13 @@ var fs = require('fs');
 var async = require('async');
 
 var DOCUMENTATION_TOP =
-  '# sublime-react\n\n' +
+  '# sublime-react-es6\n\n' +
+  'This is a fork of Facebook\'s original ReactJS Sublime Package.\n\n'+
+  'The main changes I\'ve made include:\n\n' +
+  '- Converting function declarations to the new ES6 shorthand.\n\n'+
+  '- Static class variables (defaultProps, propTypes) are declared using ES7 property intializers.\n\n'+
+  '- ES6 style exports and imports for component creating snippets.\n\n'+
+  '- Added `rrc` for Redux connected components.\n\n'+
   '![alt tag](https://raw.githubusercontent.com/mboperator/sublime-react/master/docs/img/sr-rcc-out.gif)\n\n' +
   '## Installation\n\n' +
   'Install the React package via Sublime\'s Package Manager\n\n' +
