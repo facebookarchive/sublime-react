@@ -15,7 +15,7 @@ var DOCUMENTATION_TOP =
   '*Syntax highlighting is no longer provided by this packages*. We recommend that you use ([babel-sublime](https://github.com/babel/babel-sublime)) instead.\n\n' +
   '### Snippets\n\n' +
   'It\'s easy! Simply activate snippets by typing a mnemonic followed by TAB.\n\n' +
-  '![alt tag](https://raw.githubusercontent.com/mboperator/sublime-react/master/docs/img/sr-rcc-snippets-out.gif)\n\n' +
+  '![alt tag](https://raw.githubusercontent.com/mboperator/sublime-react/master/docs/img/sr-snippets-out.gif)\n\n' +
   '#### Documentation of available snippets (JSX):\n\n' +
   '```\n';
 

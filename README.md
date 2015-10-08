@@ -24,7 +24,7 @@ You will need the Sublime [Package Manager](https://sublime.wbond.net/installati
 
 It's easy! Simply activate snippets by typing a mnemonic followed by TAB.
 
-![alt tag](https://raw.githubusercontent.com/mboperator/sublime-react/master/docs/img/sr-rcc-snippets-out.gif)
+![alt tag](https://raw.githubusercontent.com/mboperator/sublime-react/master/docs/img/sr-snippets-out.gif)
 
 #### Documentation of available snippets (JSX):
 
