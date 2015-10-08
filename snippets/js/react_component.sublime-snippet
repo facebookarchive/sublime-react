@@ -1,18 +1,23 @@
 <snippet>
     <content><![CDATA[
-var React = require('react');
+import React from 'react';
 
-var ${1:${TM_FILENAME/(.?\w*)(?:\.\w+)*$/$1/g}} = React.createClass({
+export default class ${1:${TM_FILENAME/(.?\w*)(?:\.\w+)*$/$1/g}} extends React.Component {
+  static propTypes = {
+    ${3:name}: React.PropTypes.${4:string},
+  }
 
-	render: function() {
-		return (
-			${0:<div />}
-		);
-	}
+  constructor(props) {
+    super(props);
+  }
 
-});
+  render() {
+    return (
+      <${5:div}></${5:div}>
+    );
+  }
+}
 
-module.exports = ${1:${TM_FILENAME/(.?\w*)(?:\.\w+)*$/$1/g}};
 ]]></content>
     <tabTrigger>rcc</tabTrigger>
     <scope>source.js</scope>

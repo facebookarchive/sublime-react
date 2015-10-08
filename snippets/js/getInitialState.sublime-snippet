@@ -1,10 +1,8 @@
 <snippet>
     <content><![CDATA[
-getInitialState: function() {
-	return {
-		${1}: ${2}
-	};
-},
+state = {
+	${1}: ${2}
+}
 ]]></content>
     <tabTrigger>gis</tabTrigger>
     <scope>source.js</scope>

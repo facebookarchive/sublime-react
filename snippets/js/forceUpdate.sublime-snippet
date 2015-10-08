@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[
-forceUpdate(${1:callback});
+forceUpdate(() => ${1:callback});
 ]]></content>
     <tabTrigger>fup</tabTrigger>
     <scope>source.js</scope>

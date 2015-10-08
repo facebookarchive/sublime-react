@@ -1,0 +1,37 @@
+<snippet>
+    <content><![CDATA[
+import React from 'react';
+import { connect } from 'react-redux';
+
+function mapStateToProps(state) {
+  return {
+
+  }
+}
+
+export class ${1:${TM_FILENAME/(.?\w*)(?:\.\w+)*$/$1/g}} extends React.Component {
+  static propTypes = {
+    ${2:name}: React.PropTypes.${3:string},
+  }
+
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <${4:div}></${4:div}>
+    );
+  }
+}
+
+export default connect(
+  mapStateToProps,
+// Implement map dispatch to props
+)(${1:${TM_FILENAME/(.?\w*)(?:\.\w+)*$/$1/g}})
+
+]]></content>
+    <tabTrigger>rrc</tabTrigger>
+    <scope>source.js</scope>
+    <description>React: redux component skeleton</description>
+</snippet>
