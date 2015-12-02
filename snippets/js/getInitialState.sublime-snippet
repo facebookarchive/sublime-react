@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[
-getInitialState: function() {
+getInitialState() {
 	return {
 		${1}: ${2}
 	};

@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[
-getDefaultProps: function() {
+getDefaultProps() {
 	return {
 		${1}
 	};

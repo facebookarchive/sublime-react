@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+${1}: React.PropTypes.bool${2:.isRequired}$0
+]]></content>
+    <tabTrigger>ptb</tabTrigger>
+    <scope>source.js</scope>
+    <description>React: PropTypes.bool</description>
+</snippet>

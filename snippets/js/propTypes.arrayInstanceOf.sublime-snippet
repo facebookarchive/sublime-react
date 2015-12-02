@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+${1}: React.PropTypes.arrayOf(React.PropTypes.instanceOf(${2:Class}))${3:.isRequired}$0
+]]></content>
+    <tabTrigger>ptai</tabTrigger>
+    <scope>source.js</scope>
+    <description>React: PropTypes.arrayOf (Instances)</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+${1}: React.PropTypes.arrayOf(${2:propType})${3:.isRequired}$0
+]]></content>
+    <tabTrigger>pta</tabTrigger>
+    <scope>source.js</scope>
+    <description>React: PropTypes.arrayOf</description>
+</snippet>

@@ -1,6 +1,6 @@
 # sublime-react
 
-Snippets for ReactJS. This package used to provide JSX syntax highlighting and has been DEPRECATED in favor of [babel/babel-sublime](https://github.com/babel/babel-sublime).
+Snippets for ReactJS. This package used to provide JSX syntax highlighting and has been DEPRECATED in favor of babel/babel-sublime.
 
 ![alt tag](https://raw.github.com/jgebhardt/sublime-react/master/docs/img/sr-rcc-out.gif)
 
@@ -39,6 +39,8 @@ Snippets are available for both JSX and CJSX ([React CoffeeScript](https://githu
 
      cs→  var cx = React.addons.classSet;
 
+    ctx→  this.context.
+
     cwm→  componentWillMount: fn() { ... }
 
     cwr→  componentWillReceiveProps: fn(np) { ... }
@@ -62,6 +64,34 @@ Snippets are available for both JSX and CJSX ([React CoffeeScript](https://githu
   props→  this.props.
 
      pt→  propTypes { ... }
+
+    pta→  PropTypes.arrayOf
+
+   ptai→  PropTypes.arrayOf (Instances)
+
+    ptb→  PropTypes.bool
+
+    pte→  PropTypes.element
+
+    ptf→  PropTypes.func
+
+    pti→  PropTypes.instanceOf
+
+    ptn→  PropTypes.number
+
+    ptn→  PropTypes.node
+
+    pto→  PropTypes.object
+
+   ptof→  PropTypes.oneOf (Enum)
+
+   ptof→  PropTypes.objectOf
+
+  ptoft→  PropTypes.oneOfType (Union)
+
+    pts→  PropTypes.string
+
+   ptsp→  PropTypes.shape
 
     rcc→  component skeleton
 
