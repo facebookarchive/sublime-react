@@ -4,6 +4,8 @@ var React = require('react');
 
 var ${1:${TM_FILENAME/(.?\w*)(?:\.\w+)*$/$1/g}} = React.createClass({
 
+	displayName: '${1}',
+
 	render: function() {
 		return (
 			${0:<div />}
