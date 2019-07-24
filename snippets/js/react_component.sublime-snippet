@@ -12,7 +12,7 @@ var ${1:${TM_FILENAME/(.?\w*)(?:\.\w+)*$/$1/g}} = React.createClass({
 
 });
 
-module.exports = ${1:${TM_FILENAME/(.?\w*)(?:\.\w+)*$/$1/g}};
+module.exports = $1;
 ]]></content>
     <tabTrigger>rcc</tabTrigger>
     <scope>source.js</scope>
